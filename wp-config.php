@@ -96,7 +96,7 @@ define( 'WP_DEBUG',         true );
 
 /* Disable Post Revisions. */
 define( 'WP_POST_REVISIONS', false );
-define('AUTOSAVE_INTERVAL', 3600 );
+define('AUTOSAVE_INTERVAL', 86400 );
 // define( 'WP_POST_REVISIONS', 3 );
 /* Media Trash. */
 define( 'MEDIA_TRASH', true );
