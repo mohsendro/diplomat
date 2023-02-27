@@ -1,0 +1,1100 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Codestar Framework\n"
+"POT-Creation-Date: 2020-11-11 17:27+0330\n"
+"PO-Revision-Date: 2020-11-12 08:37+0330\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fa_IR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n==0 || n==1);\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: framework.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: classes/admin-options.class.php:224
+msgid "Error while saving the changes."
+msgstr "هنگام ذخیره سازی تغییرات خطایی رخ داد."
+
+#: classes/admin-options.class.php:284
+msgid "Settings successfully imported."
+msgstr "تنظیمات با موفقیت درون ریزی شدند."
+
+#: classes/admin-options.class.php:296 classes/admin-options.class.php:312
+msgid "Default settings restored."
+msgstr "تنظیمات به حالت پیش فرض بازگردانده  شد."
+
+#: classes/admin-options.class.php:383
+msgid "Settings saved."
+msgstr "تنظیمات ذخیره شد."
+
+#: classes/admin-options.class.php:561
+msgid "You have unsaved changes, save your changes!"
+msgstr "شما تغییرات ذخیره نشده دارید ، تغییرات خود را ذخیره کنید!"
+
+#: classes/admin-options.class.php:563
+msgid "show all settings"
+msgstr "نمایش تمامی تنظیمات"
+
+#: classes/admin-options.class.php:565 fields/icon/icon.php:57
+#: fields/map/map.php:23
+msgid "Search..."
+msgstr "جستجو کردن..."
+
+#: classes/admin-options.class.php:568 classes/admin-options.class.php:691
+msgid "Save"
+msgstr "ذخیره"
+
+#: classes/admin-options.class.php:568 classes/admin-options.class.php:691
+msgid "Saving..."
+msgstr "ذخیره سازی..."
+
+#: classes/admin-options.class.php:569 classes/admin-options.class.php:692
+msgid "Reset Section"
+msgstr "ریست بخش"
+
+#: classes/admin-options.class.php:569 classes/admin-options.class.php:692
+msgid "Are you sure to reset this section options?"
+msgstr ""
+"آیا مطمئن هستید که می خواهید تنظیمات این بخش را به مقادیر پیش فرض بازگردانید؟"
+
+#: classes/admin-options.class.php:570 classes/admin-options.class.php:693
+msgid "Reset All"
+msgstr "ریست همه"
+
+#: classes/admin-options.class.php:570 classes/admin-options.class.php:693
+#: fields/backup/backup.php:31
+msgid "Reset"
+msgstr "ریست"
+
+#: classes/admin-options.class.php:570 classes/admin-options.class.php:693
+msgid "Are you sure you want to reset all settings to default values?"
+msgstr ""
+"آیا مطمئن هستید که می خواهید همه تنظیمات را به مقادیر پیش فرض بازگردانید؟"
+
+#: classes/admin-options.class.php:668 fields/button_set/button_set.php:56
+#: fields/checkbox/checkbox.php:76 fields/radio/radio.php:75
+#: fields/select/select.php:113 functions/actions.php:41
+msgid "No data available."
+msgstr "اطلاعاتی موجود نیست."
+
+#: classes/setup.class.php:527
+msgid "Are you sure?"
+msgstr "آیا مطمئن هستید؟"
+
+#: classes/setup.class.php:528
+#, php-format
+msgid "Please enter %s or more characters"
+msgstr "لطفا  %s  کاراکتر های بیشتری را وارد نمایید"
+
+#: classes/setup.class.php:529
+msgid "Searching..."
+msgstr "جستجوکردن..."
+
+#: classes/setup.class.php:530
+msgid "No results found."
+msgstr "نتیجه ای پیدا نشد."
+
+#: classes/setup.class.php:602
+msgid "Oops! Not allowed."
+msgstr "اوه! مجاز نیست."
+
+#: classes/setup.class.php:676 classes/setup.class.php:680
+msgid "Field not found!"
+msgstr "رشته پیدا نشد!"
+
+#: configuring-required-plugins.php:302
+msgid "Install Required Plugins"
+msgstr "افزونه های مورد نیاز را نصب کنید"
+
+#: configuring-required-plugins.php:303
+msgid "Install Plugins"
+msgstr "افزونه ها را نصب کنید"
+
+#. translators: %s: plugin name.
+#: configuring-required-plugins.php:305
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr "افزونه ها را نصب کنید: %s"
+
+#. translators: %s: plugin name.
+#: configuring-required-plugins.php:307
+#, php-format
+msgid "Updating Plugin: %s"
+msgstr "افزونه ها را نصب کنید: %s"
+
+#: configuring-required-plugins.php:308
+msgid "Something went wrong with the plugin API."
+msgstr "مشکلی در افزونه API رخ داد."
+
+#. translators: 1: plugin name(s).
+#: configuring-required-plugins.php:311
+#, php-format
+msgid "This theme requires the following plugin: %1$s."
+msgid_plural "This theme requires the following plugins: %1$s."
+msgstr[0] "این قالب به افزونه های زیر نیاز دارد: %1$s."
+msgstr[1] "این قالب به افزونه زیر نیاز دارد: %1$s."
+
+#. translators: 1: plugin name(s).
+#: configuring-required-plugins.php:317
+#, php-format
+msgid "This theme recommends the following plugin: %1$s."
+msgid_plural "This theme recommends the following plugins: %1$s."
+msgstr[0] "این قالب افزونه های زیر را توصیه می کند: %1$s."
+msgstr[1] "این قالب افزونه زیر را توصیه می کند: %1$s."
+
+#. translators: 1: plugin name(s).
+#: configuring-required-plugins.php:323
+#, php-format
+msgid ""
+"The following plugin needs to be updated to its latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgid_plural ""
+"The following plugins need to be updated to their latest version to ensure "
+"maximum compatibility with this theme: %1$s."
+msgstr[0] ""
+"برای اطمینان از حداکثر سازگاری با این قالب، افزونه های زیر باید به آخرین "
+"نسخه خود به روز شوند: %1$s."
+msgstr[1] ""
+"برای اطمینان از حداکثر سازگاری با این قالب، افزونه های زیر باید به آخرین "
+"نسخه خود به روز شوند: %1$s."
+
+#. translators: 1: plugin name(s).
+#: configuring-required-plugins.php:329
+#, php-format
+msgid "There is an update available for: %1$s."
+msgid_plural "There are updates available for the following plugins: %1$s."
+msgstr[0] "برای افزونه های زیر بروزرسانی در دسترس است: %1$s."
+msgstr[1] "بروزرسانی در دسترس است برای: %1$s."
+
+#. translators: 1: plugin name(s).
+#: configuring-required-plugins.php:335
+#, php-format
+msgid "The following required plugin is currently inactive: %1$s."
+msgid_plural "The following required plugins are currently inactive: %1$s."
+msgstr[0] "افزونه های مورد نیاز زیر در حال حاضر غیرفعال هستند: %1$s."
+msgstr[1] "افزونه مورد نیاز زیر در حال حاضر غیرفعال است: %1$s."
+
+#. translators: 1: plugin name(s).
+#: configuring-required-plugins.php:341
+#, php-format
+msgid "The following recommended plugin is currently inactive: %1$s."
+msgid_plural "The following recommended plugins are currently inactive: %1$s."
+msgstr[0] "افزونه های توصیه شده زیر در حال حاضر غیرفعال هستند: %1$s."
+msgstr[1] "افزونه پیشنهادی زیر در حال حاضر غیرفعال است: %1$s."
+
+#: configuring-required-plugins.php:346
+msgid "Begin installing plugin"
+msgid_plural "Begin installing plugins"
+msgstr[0] "نصب افزونه ها را شروع کنید"
+msgstr[1] "نصب افزونه را شروع کنید"
+
+#: configuring-required-plugins.php:351
+msgid "Begin updating plugin"
+msgid_plural "Begin updating plugins"
+msgstr[0] "بروزرسانی افزونه ها را شروع کنید"
+msgstr[1] "شروع بروزرسانی افزونه"
+
+#: configuring-required-plugins.php:356
+msgid "Begin activating plugin"
+msgid_plural "Begin activating plugins"
+msgstr[0] "فعال سازی افزونه ها را شروع کنید"
+msgstr[1] "فعال کردن افزونه را شروع کنید"
+
+#: configuring-required-plugins.php:360
+msgid "Return to Required Plugins Installer"
+msgstr "بازگشت برای نصب افزونه مورد نیاز"
+
+#: configuring-required-plugins.php:361 configuring-required-plugins.php:888
+#: configuring-required-plugins.php:2594 configuring-required-plugins.php:3641
+msgid "Return to the Dashboard"
+msgstr "بازگشت به پیشخوان"
+
+#: configuring-required-plugins.php:362 configuring-required-plugins.php:3220
+msgid "Plugin activated successfully."
+msgstr "افزونه با موفقیت فعال شد."
+
+#: configuring-required-plugins.php:363 configuring-required-plugins.php:3013
+msgid "The following plugin was activated successfully:"
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] "افزونه های زیر با موفقیت فعال شدند:"
+msgstr[1] "افزونه زیر با موفقیت فعال شد:"
+
+#. translators: 1: plugin name.
+#: configuring-required-plugins.php:365
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr "اقدامی انجام نشده است افزونه %1$s قبلاً فعال بود."
+
+#. translators: 1: plugin name.
+#: configuring-required-plugins.php:367
+#, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+"افزونه فعال نیست. نسخه بالاتر از %s برای این قالب مورد نیاز است. لطفا افزونه "
+"را به روز کنید."
+
+#. translators: 1: dashboard link.
+#: configuring-required-plugins.php:369
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr "همه افزونه ها با موفقیت نصب و فعال شدند. %1$s"
+
+#: configuring-required-plugins.php:370
+msgid "Dismiss this notice"
+msgstr "این اخطار را رد کنید"
+
+#: configuring-required-plugins.php:371
+msgid ""
+"There are one or more required or recommended plugins to install, update or "
+"activate."
+msgstr ""
+"یک یا چند افزونه مورد نیاز یا توصیه شده برای نصب، بروزرسانی یا فعال سازی "
+"وجود دارد."
+
+#: configuring-required-plugins.php:372
+msgid "Please contact the administrator of this site for help."
+msgstr "لطفاً برای راهنمایی با مدیر این سایت تماس بگیرید."
+
+#: configuring-required-plugins.php:575
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr "این افزونه باید به روز شود تا با قالب شما سازگار باشد."
+
+#: configuring-required-plugins.php:576
+msgid "Update Required"
+msgstr "بروزرسانی نیاز است"
+
+#: configuring-required-plugins.php:693
+msgid "Set the parent_slug config variable instead."
+msgstr "در عوض متغیر پیکربندی parent_slug را تنظیم کنید."
+
+#: configuring-required-plugins.php:995
+msgid ""
+"The remote plugin package does not contain a folder with the desired slug "
+"and renaming did not work."
+msgstr ""
+"بسته افزونه از راه دور شامل پوشه ای با حلقه مورد نظر نیست و تغییر نام کار "
+"نمی کند."
+
+#: configuring-required-plugins.php:995 configuring-required-plugins.php:998
+msgid ""
+"Please contact the plugin provider and ask them to package their plugin "
+"according to the WordPress guidelines."
+msgstr ""
+"لطفاً با ارائه دهنده افزونه تماس بگیرید و از آنها بخواهید که افزونه خود را "
+"طبق دستورالعمل های وردپرس بسته بندی کنند."
+
+#: configuring-required-plugins.php:998
+msgid ""
+"The remote plugin package consists of more than one file, but the files are "
+"not packaged in a folder."
+msgstr ""
+"بسته افزونه راه دور از بیش از یک پرونده تشکیل شده است ، اما پرونده ها در یک "
+"پوشه بسته بندی نشده اند."
+
+#: configuring-required-plugins.php:1182 configuring-required-plugins.php:3009
+msgctxt "plugin A *and* plugin B"
+msgid "and"
+msgstr "و"
+
+#. translators: %s: version number
+#: configuring-required-plugins.php:2043
+#, php-format
+msgid "TGMPA v%s"
+msgstr "TGMPA v%s"
+
+#: configuring-required-plugins.php:2334
+msgid "Required"
+msgstr "ضروری"
+
+#: configuring-required-plugins.php:2337
+msgid "Recommended"
+msgstr "توصیه شده"
+
+#: configuring-required-plugins.php:2353
+msgid "WordPress Repository"
+msgstr "مخزن وردپرس"
+
+#: configuring-required-plugins.php:2356
+msgid "External Source"
+msgstr "منبع خارجی"
+
+#: configuring-required-plugins.php:2359
+msgid "Pre-Packaged"
+msgstr "از قبل بسته بندی شده"
+
+#: configuring-required-plugins.php:2376
+msgid "Not Installed"
+msgstr "نصب نشده"
+
+#: configuring-required-plugins.php:2380
+msgid "Installed But Not Activated"
+msgstr "نصب شد اما فعال نشده است"
+
+#: configuring-required-plugins.php:2382 fields/link_color/link_color.php:38
+msgid "Active"
+msgstr "فعال"
+
+#: configuring-required-plugins.php:2388
+msgid "Required Update not Available"
+msgstr "بروز رسانی مورد نیاز موجود نیست"
+
+#: configuring-required-plugins.php:2391
+msgid "Requires Update"
+msgstr "نیاز به بروزرسانی دارد"
+
+#: configuring-required-plugins.php:2394
+msgid "Update recommended"
+msgstr "بروزرسانی توصیه می شود"
+
+#. translators: 1: install status, 2: update status
+#: configuring-required-plugins.php:2403
+#, php-format
+msgctxt "Install/Update Status"
+msgid "%1$s, %2$s"
+msgstr "%1$s, %2$s"
+
+#. translators: 1: number of plugins.
+#: configuring-required-plugins.php:2449
+#, php-format
+msgctxt "plugins"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] "همه <span class=\"count\">(%s)</span>"
+msgstr[1] "همه <span class=\"count\">(%s)</span>"
+
+#. translators: 1: number of plugins.
+#: configuring-required-plugins.php:2453
+#, php-format
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgid_plural "To Install <span class=\"count\">(%s)</span>"
+msgstr[0] "برای نصب <span class=\"count\">(%s)</span>"
+msgstr[1] "برای نصب <span class=\"count\">(%s)</span>"
+
+#. translators: 1: number of plugins.
+#: configuring-required-plugins.php:2457
+#, php-format
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+msgstr[0] "بروزرسانی موجود است <span class=\"count\">(%s)</span>"
+msgstr[1] "بروزرسانی موجود است <span class=\"count\">(%s)</span>"
+
+#. translators: 1: number of plugins.
+#: configuring-required-plugins.php:2461
+#, php-format
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+msgstr[0] "فعال سازی <span class=\"count\">(%s)</span>"
+msgstr[1] "فعال سازی <span class=\"count\">(%s)</span>"
+
+#: configuring-required-plugins.php:2543
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
+msgstr "ناشناخته"
+
+#: configuring-required-plugins.php:2551
+msgid "Installed version:"
+msgstr "نسخه نصب شده:"
+
+#: configuring-required-plugins.php:2559
+msgid "Minimum required version:"
+msgstr "حداقل نسخه مورد نیاز:"
+
+#: configuring-required-plugins.php:2571
+msgid "Available version:"
+msgstr "نسخه موجود:"
+
+#: configuring-required-plugins.php:2594
+msgid "No plugins to install, update or activate."
+msgstr "هیچ افزونه ای برای نصب ، بروزرسانی یا فعال سازی وجود ندارد."
+
+#: configuring-required-plugins.php:2608
+msgid "Plugin"
+msgstr "افزونه"
+
+#: configuring-required-plugins.php:2609
+msgid "Source"
+msgstr "منبع"
+
+#: configuring-required-plugins.php:2610
+msgid "Type"
+msgstr "نوع"
+
+#: configuring-required-plugins.php:2614
+msgid "Version"
+msgstr "نسخه"
+
+#: configuring-required-plugins.php:2615
+msgid "Status"
+msgstr "وضعیت"
+
+#. translators: %2$s: plugin name in screen reader markup
+#: configuring-required-plugins.php:2664
+#, php-format
+msgid "Install %2$s"
+msgstr "نصب %2$s"
+
+#. translators: %2$s: plugin name in screen reader markup
+#: configuring-required-plugins.php:2669
+#, php-format
+msgid "Update %2$s"
+msgstr "بروزرسانی %2$s"
+
+#. translators: %2$s: plugin name in screen reader markup
+#: configuring-required-plugins.php:2675
+#, php-format
+msgid "Activate %2$s"
+msgstr "فعال سازی %2$s"
+
+#: configuring-required-plugins.php:2745
+msgid "Upgrade message from the plugin author:"
+msgstr "پیام را از نویسنده افزونه ارتقا دهید:"
+
+#: configuring-required-plugins.php:2778
+msgid "Install"
+msgstr "نصب"
+
+#: configuring-required-plugins.php:2784
+msgid "Update"
+msgstr "بروزرسانی"
+
+#: configuring-required-plugins.php:2787
+msgid "Activate"
+msgstr "فعال کنید"
+
+#: configuring-required-plugins.php:2818
+msgid "No plugins were selected to be installed. No action taken."
+msgstr "هیچ افزونه ای برای نصب انتخاب نشده است. اقدامی انجام نشده است."
+
+#: configuring-required-plugins.php:2820
+msgid "No plugins were selected to be updated. No action taken."
+msgstr "هیچ افزونه ای برای بروزرسانی انتخاب نشده است. اقدامی انجام نشده است."
+
+#: configuring-required-plugins.php:2861
+msgid "No plugins are available to be installed at this time."
+msgstr "در حال حاضر هیچ افزونه ای برای نصب در دسترس نیست."
+
+#: configuring-required-plugins.php:2863
+msgid "No plugins are available to be updated at this time."
+msgstr "در حال حاضر هیچ افزونه ای برای بروزرسانی در دسترس نیست."
+
+#: configuring-required-plugins.php:2969
+msgid "No plugins were selected to be activated. No action taken."
+msgstr "هیچ افزونه ای برای فعال شدن انتخاب نشده است. اقدامی انجام نشده است."
+
+#: configuring-required-plugins.php:2995
+msgid "No plugins are available to be activated at this time."
+msgstr "در حال حاضر هیچ افزونه ای برای فعال شدن موجود نیست."
+
+#: configuring-required-plugins.php:3219
+msgid "Plugin activation failed."
+msgstr "فعال سازی افزونه انجام نشد."
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: configuring-required-plugins.php:3559
+#, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr "بروزرسانی افزونه %1$s (%2$d/%3$d)"
+
+#. translators: 1: plugin name, 2: error message.
+#: configuring-required-plugins.php:3562
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr "هنگام نصب خطایی روی داد %1$s: <strong>%2$s</strong>."
+
+#. translators: 1: plugin name.
+#: configuring-required-plugins.php:3564
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr "نصب %1$s ناموفق."
+
+#: configuring-required-plugins.php:3568
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+"مراحل نصب و فعال سازی در حال شروع است. این روند ممکن است در برخی از میزبان "
+"ها مدتی طول بکشد ، بنابراین لطفاً صبور باشید."
+
+#. translators: 1: plugin name.
+#: configuring-required-plugins.php:3570
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr "%1$s با موفقیت نصب و فعال گردید.."
+
+#: configuring-required-plugins.php:3570 configuring-required-plugins.php:3578
+msgid "Show Details"
+msgstr "نمایش جزئیات"
+
+#: configuring-required-plugins.php:3570 configuring-required-plugins.php:3578
+msgid "Hide Details"
+msgstr "پنهان کردن جزئیات"
+
+#: configuring-required-plugins.php:3571
+msgid "All installations and activations have been completed."
+msgstr "تمام نصب ها و فعال سازی ها به پایان رسیده است."
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: configuring-required-plugins.php:3573
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr "نصب و فعال سازی پلاگین %1$s (%2$d/%3$d)"
+
+#: configuring-required-plugins.php:3576
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+"روند نصب در حال شروع است. این روند ممکن است در برخی از میزبان ها مدتی طول "
+"بکشد ، بنابراین لطفاً صبور باشید."
+
+#. translators: 1: plugin name.
+#: configuring-required-plugins.php:3578
+#, php-format
+msgid "%1$s installed successfully."
+msgstr "%1$s با موفقیت نصب شد."
+
+#: configuring-required-plugins.php:3579
+msgid "All installations have been completed."
+msgstr "تمام نصب ها به پایان رسیده است."
+
+#. translators: 1: plugin name, 2: action number 3: total number of actions.
+#: configuring-required-plugins.php:3581
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr "درحال نصب افزونه %1$s (%2$d/%3$d)"
+
+#: fields/background/background.php:35 fields/media/media.php:57
+msgid "Not selected"
+msgstr "انتخاب نشده"
+
+#: fields/background/background.php:66 fields/date/date.php:31
+msgid "From"
+msgstr "از"
+
+#: fields/background/background.php:84 fields/date/date.php:32
+msgid "To"
+msgstr "به"
+
+#: fields/background/background.php:102
+msgid "Direction"
+msgstr "جهت"
+
+#: fields/background/background.php:109
+msgid "&#8659; top to bottom"
+msgstr "&#8659; بالا به پایین"
+
+#: fields/background/background.php:110
+msgid "&#8658; left to right"
+msgstr "&#8658; چپ به راست"
+
+#: fields/background/background.php:111
+msgid "&#8664; corner top to right"
+msgstr "&#8664; گوشه بالا به راست"
+
+#: fields/background/background.php:112
+msgid "&#8665; corner top to left"
+msgstr "&#8665; گوشه بالا به چپ"
+
+#: fields/background/background.php:156
+msgid "Left Top"
+msgstr "چپ بالا"
+
+#: fields/background/background.php:157
+msgid "Left Center"
+msgstr "چپ مرکز"
+
+#: fields/background/background.php:158
+msgid "Left Bottom"
+msgstr "چپ پایین"
+
+#: fields/background/background.php:159
+msgid "Center Top"
+msgstr "مرکز بالا"
+
+#: fields/background/background.php:160
+msgid "Center Center"
+msgstr "مرکز مرکز"
+
+#: fields/background/background.php:161
+msgid "Center Bottom"
+msgstr "مرکز پایین"
+
+#: fields/background/background.php:162
+msgid "Right Top"
+msgstr "راست بالا"
+
+#: fields/background/background.php:163
+msgid "Right Center"
+msgstr "راست مرکز"
+
+#: fields/background/background.php:164
+msgid "Right Bottom"
+msgstr "راست پایین"
+
+#: fields/background/background.php:179
+msgid "Repeat"
+msgstr "تکرار"
+
+#: fields/background/background.php:180
+msgid "No Repeat"
+msgstr "بدون تکرار"
+
+#: fields/background/background.php:181
+msgid "Repeat Horizontally"
+msgstr "تکرار افقی"
+
+#: fields/background/background.php:182
+msgid "Repeat Vertically"
+msgstr "تکرار عمودی"
+
+#: fields/background/background.php:197
+msgid "Scroll"
+msgstr "اسکرول"
+
+#: fields/background/background.php:198
+msgid "Fixed"
+msgstr "ثابت"
+
+#: fields/background/background.php:213
+msgid "Cover"
+msgstr "پوشش"
+
+#: fields/background/background.php:214
+msgid "Contain"
+msgstr "شامل"
+
+#: fields/background/background.php:215
+msgid "Auto"
+msgstr "خودکار"
+
+#: fields/background/background.php:229
+msgid "Background Origin"
+msgstr "نقطه شروع زمینه"
+
+#: fields/background/background.php:230 fields/background/background.php:248
+msgid "Padding Box"
+msgstr "فاصله داخلی باکس"
+
+#: fields/background/background.php:231 fields/background/background.php:247
+msgid "Border Box"
+msgstr "حاشیه باکس"
+
+#: fields/background/background.php:232 fields/background/background.php:249
+msgid "Content Box"
+msgstr "محتوای باکس"
+
+#: fields/background/background.php:246
+msgid "Background Clip"
+msgstr "کلیپ پس زمینه"
+
+#: fields/background/background.php:263
+msgid "Background Blend Mode"
+msgstr "حالت ترکیب پس زمینه"
+
+#: fields/background/background.php:264 fields/link_color/link_color.php:36
+#: fields/typography/typography.php:175
+msgid "Normal"
+msgstr "نرمال"
+
+#: fields/background/background.php:265
+msgid "Multiply"
+msgstr "چند حالته"
+
+#: fields/background/background.php:266
+msgid "Screen"
+msgstr "اسکرین"
+
+#: fields/background/background.php:267
+msgid "Overlay"
+msgstr "شامل"
+
+#: fields/background/background.php:268
+msgid "Darken"
+msgstr "تاریک"
+
+#: fields/background/background.php:269
+msgid "Lighten"
+msgstr "روشن"
+
+#: fields/background/background.php:270
+msgid "Color Dodge"
+msgstr "رنگ خالی"
+
+#: fields/background/background.php:271
+msgid "Saturation"
+msgstr "اشباع"
+
+#: fields/background/background.php:272
+msgid "Color"
+msgstr "رنگ"
+
+#: fields/background/background.php:273
+msgid "Luminosity"
+msgstr "درخشندگی"
+
+#: fields/backup/backup.php:26
+msgid "Import"
+msgstr "درون ریزی"
+
+#: fields/backup/backup.php:29
+msgid "Export & Download"
+msgstr "برون بری و دانلود"
+
+#: fields/border/border.php:25 fields/spacing/spacing.php:25
+msgid "top"
+msgstr "بالا"
+
+#: fields/border/border.php:26 fields/spacing/spacing.php:26
+msgid "right"
+msgstr "راست"
+
+#: fields/border/border.php:27 fields/spacing/spacing.php:27
+msgid "bottom"
+msgstr "پایین"
+
+#: fields/border/border.php:28 fields/spacing/spacing.php:28
+msgid "left"
+msgstr "چپ"
+
+#: fields/border/border.php:29 fields/spacing/spacing.php:29
+msgid "all"
+msgstr "همه"
+
+#: fields/border/border.php:51 fields/typography/typography.php:203
+msgid "Solid"
+msgstr "یکپارچه"
+
+#: fields/border/border.php:52 fields/typography/typography.php:206
+msgid "Dashed"
+msgstr "خط چین"
+
+#: fields/border/border.php:53 fields/typography/typography.php:205
+msgid "Dotted"
+msgstr "نقطه چین"
+
+#: fields/border/border.php:54 fields/typography/typography.php:204
+msgid "Double"
+msgstr "دوبل"
+
+#: fields/border/border.php:55
+msgid "Inset"
+msgstr "داخلی"
+
+#: fields/border/border.php:56
+msgid "Outset"
+msgstr "خارجی"
+
+#: fields/border/border.php:57
+msgid "Groove"
+msgstr "شیار"
+
+#: fields/border/border.php:58
+msgid "ridge"
+msgstr "لبه"
+
+#: fields/border/border.php:59 fields/typography/typography.php:188
+#: fields/typography/typography.php:202
+msgid "None"
+msgstr "هیچ کدام"
+
+#: fields/dimensions/dimensions.php:22
+msgid "width"
+msgstr "عرض"
+
+#: fields/dimensions/dimensions.php:23
+msgid "height"
+msgstr "ارتفاع"
+
+#: fields/gallery/gallery.php:20
+msgid "Add Gallery"
+msgstr "افزودن به گالری"
+
+#: fields/gallery/gallery.php:21
+msgid "Edit Gallery"
+msgstr "ویرایش گالری"
+
+#: fields/gallery/gallery.php:22
+msgid "Clear"
+msgstr "پاک کردن"
+
+#: fields/group/group.php:23
+msgid "Add New"
+msgstr "اضافه کردن مورد جدید"
+
+#: fields/group/group.php:35 fields/repeater/repeater.php:27
+msgid "Error: Field ID conflict."
+msgstr "خطا: مغایرت فیلد آیدی."
+
+#: fields/group/group.php:46 fields/group/group.php:87
+#: fields/repeater/repeater.php:48 fields/repeater/repeater.php:76
+msgid "Are you sure to delete this item?"
+msgstr "آیا مطمئن هستید که این می خواهید این مورد را حذف کنید؟"
+
+#: fields/group/group.php:121 fields/repeater/repeater.php:89
+msgid "You cannot add more."
+msgstr "نمی توانید مورد بیشتری اضافه کنید."
+
+#: fields/group/group.php:122 fields/repeater/repeater.php:90
+msgid "You cannot remove more."
+msgstr "نمی توانید مورد بیشتری را  حذف کنید."
+
+#: fields/icon/icon.php:20 fields/icon/icon.php:53
+msgid "Add Icon"
+msgstr "افزودن آیکن"
+
+#: fields/icon/icon.php:21
+msgid "Remove Icon"
+msgstr "حذف آیکن"
+
+#: fields/link_color/link_color.php:37
+msgid "Hover"
+msgstr "هاور"
+
+#: fields/link_color/link_color.php:39
+msgid "Visited"
+msgstr "ویزیت"
+
+#: fields/link_color/link_color.php:40
+msgid "Focus"
+msgstr "فوکوس"
+
+#: fields/map/map.php:24
+msgid "Latitude"
+msgstr "عرض"
+
+#: fields/map/map.php:25
+msgid "Longitude"
+msgstr "طول"
+
+#: fields/media/media.php:23 fields/upload/upload.php:21
+msgid "Upload"
+msgstr "بارگذاری"
+
+#: fields/media/media.php:24 fields/upload/upload.php:22
+msgid "Remove"
+msgstr "حذف"
+
+#: fields/sorter/sorter.php:21
+msgid "Enabled"
+msgstr "فعال"
+
+#: fields/sorter/sorter.php:22
+msgid "Disabled"
+msgstr "غیرفعال"
+
+#: fields/switcher/switcher.php:20
+msgid "On"
+msgstr "فعال"
+
+#: fields/switcher/switcher.php:21
+msgid "Off"
+msgstr "غیرفعال"
+
+#: fields/typography/typography.php:85
+msgid "Font Family"
+msgstr "خانواده فونت"
+
+#: fields/typography/typography.php:86
+msgid "Select a font"
+msgstr "خانواده فونت را انتخاب کنید"
+
+#: fields/typography/typography.php:94
+msgid "Backup Font Family"
+msgstr "خانواده فونت پشتیبان"
+
+#: fields/typography/typography.php:108 fields/typography/typography.php:121
+#: fields/typography/typography.php:134 fields/typography/typography.php:149
+#: fields/typography/typography.php:165 fields/typography/typography.php:178
+#: fields/typography/typography.php:192 fields/typography/typography.php:210
+msgid "Default"
+msgstr "پیشفرض"
+
+#: fields/typography/typography.php:119
+msgid "Font Style"
+msgstr "استایل فونت"
+
+#: fields/typography/typography.php:133 fields/typography/typography.php:134
+msgid "Load Extra Styles"
+msgstr "بارگیری استایل های اضافی"
+
+#: fields/typography/typography.php:147
+msgid "Subset"
+msgstr "زیرمجموعه"
+
+#: fields/typography/typography.php:157
+msgid "Text Align"
+msgstr "ترازبندی متن"
+
+#: fields/typography/typography.php:159
+msgid "Inherit"
+msgstr "ارث بری"
+
+#: fields/typography/typography.php:160
+msgid "Left"
+msgstr "چپ چپ"
+
+#: fields/typography/typography.php:161
+msgid "Center"
+msgstr "مرکز"
+
+#: fields/typography/typography.php:162
+msgid "Right"
+msgstr "راست"
+
+#: fields/typography/typography.php:163
+msgid "Justify"
+msgstr "کشش متن"
+
+#: fields/typography/typography.php:164
+msgid "Initial"
+msgstr "اولیه"
+
+#: fields/typography/typography.php:173
+msgid "Font Variant"
+msgstr "نوع فونت"
+
+#: fields/typography/typography.php:176
+msgid "Small Caps"
+msgstr "حروف کوچک"
+
+#: fields/typography/typography.php:177
+msgid "All Small Caps"
+msgstr "همه حروف کوچک"
+
+#: fields/typography/typography.php:186
+msgid "Text Transform"
+msgstr "ترانسفرم متن"
+
+#: fields/typography/typography.php:189
+msgid "Capitalize"
+msgstr "بزرگ کردن"
+
+#: fields/typography/typography.php:190
+msgid "Uppercase"
+msgstr "بزرگ"
+
+#: fields/typography/typography.php:191
+msgid "Lowercase"
+msgstr "کوچک"
+
+#: fields/typography/typography.php:200
+msgid "Text Decoration"
+msgstr "استایل متن"
+
+#: fields/typography/typography.php:207
+msgid "Wavy"
+msgstr "موج دار"
+
+#: fields/typography/typography.php:208
+msgid "Overline"
+msgstr "خط کشیدن"
+
+#: fields/typography/typography.php:209
+msgid "Line-through"
+msgstr "خط انتقال"
+
+#: fields/typography/typography.php:222
+msgid "Font Size"
+msgstr "اندازه فونت"
+
+#: fields/typography/typography.php:234
+msgid "Line Height"
+msgstr "ارتفاع خطوط"
+
+#: fields/typography/typography.php:246
+msgid "Letter Spacing"
+msgstr "فاصله خطوط"
+
+#: fields/typography/typography.php:258
+msgid "Word Spacing"
+msgstr "فاصله کلمات"
+
+#: fields/typography/typography.php:273
+msgid "Font Color"
+msgstr "رنگ فونت"
+
+#: fields/typography/typography.php:284
+msgid "Custom Style"
+msgstr "استایل سفارشی"
+
+#: fields/typography/typography.php:351
+msgid "Custom Web Fonts"
+msgstr "فونت های سفارشی وب"
+
+#: fields/typography/typography.php:357
+msgid "Safe Web Fonts"
+msgstr "فونت های صحیح"
+
+#: fields/typography/typography.php:377
+msgid "Google Web Fonts"
+msgstr "فونت های گوگل"
+
+#: functions/actions.php:16 functions/actions.php:68 functions/actions.php:106
+#: functions/actions.php:141 functions/actions.php:170
+msgid "Error: Invalid nonce verification."
+msgstr "خطا: تایید صحت غیر معتبر است."
+
+#: functions/actions.php:72 functions/actions.php:110
+msgid "Error: Invalid key."
+msgstr "خطا: کلید نامعتبر است."
+
+#: functions/actions.php:114
+msgid "Error: The response is not a valid JSON response."
+msgstr "خطا: هیچ واکنشی به یک پاسخ معتبر JSON نیست."
+
+#: functions/actions.php:174
+msgid "Error: Invalid term ID."
+msgstr "خطا: آیدی اصطلاح نامعتبر است."
+
+#: functions/actions.php:180
+msgid "Error: You do not have permission to do that."
+msgstr "خطا: شما اجازه این کار را ندارید."
+
+#: functions/validate.php:14 functions/validate.php:86
+msgid "Please enter a valid email address."
+msgstr "لطفا یک آدرس ایمیل معتبر وارد کنید."
+
+#: functions/validate.php:32 functions/validate.php:106
+msgid "Please enter a valid number."
+msgstr "لطفا یک شماره معتبر وارد کنید."
+
+#: functions/validate.php:50 functions/validate.php:126
+msgid "This field is required."
+msgstr "این قسمت الزامی است."
+
+#: functions/validate.php:68 functions/validate.php:146
+msgid "Please enter a valid URL."
+msgstr "لطفا یک نشانی وب معتبر وارد کنید."
+
+#. Plugin Name of the plugin/theme
+msgid "Codestar Framework"
+msgstr "فریم ورک Codestar"
+
+#. Plugin URI of the plugin/theme
+msgid "http://codestarframework.com/"
+msgstr "http://codestarframework.com/"
+
+#. Description of the plugin/theme
+msgid ""
+"A Simple and Lightweight WordPress Option Framework for Themes and Plugins"
+msgstr "یک فریمورک ساده و سبک وردپرس برای قالب ها و افزونه ها"
+
+#. Author of the plugin/theme
+msgid "Codestar"
+msgstr "Codestar"
+
+#. Author URI of the plugin/theme
+msgid "http://codestarthemes.com/"
+msgstr "http://codestarthemes.com/"

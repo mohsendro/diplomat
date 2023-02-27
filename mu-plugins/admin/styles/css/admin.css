@@ -1,0 +1,34 @@
+@font-face {
+  font-family: 'dana';
+  src: url('../fonts/dana.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/dana.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/dana.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/dana.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/dana.ttf')  format('truetype') /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: 'iransans';
+  src: url('../fonts/iransans.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/iransans.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/iransans.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/iransans.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/iransans.ttf')  format('truetype') /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: 'iransans-dn';
+  src: url('fonts/iransans-dn.eot'); /* IE9 Compat Modes */
+  src: url('fonts/iransans-dn.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('fonts/iransans-dn.woff2') format('woff2'), /* Super Modern Browsers */
+       url('fonts/iransans-dn.woff') format('woff'), /* Pretty Modern Browsers */
+       url('fonts/iransans-dn.ttf')  format('truetype') /* Safari, Android, iOS */
+}
+body.rtl, body.rtl .press-this a.wp-switch-editor,#danafy-list-plugins, #danafy-list-demo, #danafy-document, #wpadminbar .quicklinks>ul>li>a, #wpadminbar ul li:last-child, #wpadminbar ul li:last-child .ab-item, #wpadminbar .ab-label, span.display-name, a.ab-item, .rtl h1, .rtl h2, .rtl h3, .rtl h4, .rtl h5, .rtl h6{
+  font-family: 'iransans'!important;
+  text-align: right;
+}  
+.css-wdf2ti-Wrapper, .block-editor-inserter__search input[type=search].block-editor-inserter__search-input, .components-notice-list .components-notice__content, .components-modal__frame *, .components-modal__frame :after, .components-modal__frame :before, .components-popover *, .components-popover :after, .components-popover :before, .edit-post-header *, .edit-post-header :after, .edit-post-header :before, .edit-post-layout__inserter-panel *, .edit-post-layout__inserter-panel :after, .edit-post-layout__inserter-panel :before, .edit-post-sidebar *, .edit-post-sidebar :after, .edit-post-sidebar :before, .edit-post-text-editor *, .edit-post-text-editor :after, .edit-post-text-editor :before, .edit-post-visual-editor *, .edit-post-visual-editor :after, .edit-post-visual-editor :before, .editor-post-publish-panel *, .editor-post-publish-panel :after, .editor-post-publish-panel :before, .block-editor-link-control .block-editor-link-control__search-input.block-editor-link-control__search-input input[type=text], .rtl .media-frame, .rtl .media-frame .search, .rtl .media-frame input[type=email], .rtl .media-frame input[type=number], .rtl .media-frame input[type=password], .rtl .media-frame input[type=search], .rtl .media-frame input[type=tel], .rtl .media-frame input[type=text], .rtl .media-frame input[type=url], .rtl .media-frame select, .rtl .media-frame textarea, .rtl .media-modal{
+  font-family: 'iransans'!important;
+} 
+.csf-nav-normal+.csf-content {
+  margin-left: 0!important;
+}

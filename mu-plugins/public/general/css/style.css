@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'dana';
+    src: url('../fonts/dana.eot');
+    /* IE9 Compat Modes */
+    src: url('../fonts/dana.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fonts/dana.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/dana.woff') format('woff'),
+        /* Pretty Modern Browsers */
+        url('../fonts/dana.ttf') format('truetype')
+        /* Safari, Android, iOS */
+}
+
+@font-face {
+    font-family: 'iransans';
+    src: url('../fonts/iransans.eot');
+    /* IE9 Compat Modes */
+    src: url('../fonts/iransans.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fonts/iransans.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/iransans.woff') format('woff'),
+        /* Pretty Modern Browsers */
+        url('../fonts/iransans.ttf') format('truetype')
+        /* Safari, Android, iOS */
+}
+
+@font-face {
+    font-family: 'iransans-dn';
+    src: url('fonts/iransans-dn.eot');
+    /* IE9 Compat Modes */
+    src: url('fonts/iransans-dn.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('fonts/iransans-dn.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('fonts/iransans-dn.woff') format('woff'),
+        /* Pretty Modern Browsers */
+        url('fonts/iransans-dn.ttf') format('truetype')
+        /* Safari, Android, iOS */
+}
+
+body.rtl,
+body.rtl .press-this a.wp-switch-editor,
+#danafy-list-plugins,
+#danafy-list-demo,
+#danafy-document,
+#wpadminbar .quicklinks>ul>li>a,
+#wpadminbar ul li:last-child,
+#wpadminbar ul li:last-child .ab-item,
+#wpadminbar .ab-label,
+span.display-name,
+a.ab-item,
+.rtl h1,
+.rtl h2,
+.rtl h3,
+.rtl h4,
+.rtl h5,
+.rtl h6 {
+    font-family: 'iransans' !important;
+    text-align: right;
+}

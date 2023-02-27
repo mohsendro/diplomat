@@ -1,0 +1,47 @@
+# Your Files
+/wordpress/tr_cache/rapid_cache/*
+/wordpress/wp-content/*
+# !/wordpress/wp-content/mu-plugins/
+!/wordpress/wp-content/advanced-cache.php
+
+# Vendor
+node_modules
+/vendor
+package-lock.json
+
+# Environment
+.env
+/wp-config.php
+/sql/run/*
+.phpunit.result.cache
+npm-debug.log
+yarn-error.log
+/galaxy-config.php
+
+# WordPress
+/wordpress/*.*
+/wordpress/.maintenance
+/wordpress/wp-admin
+/wordpress/wp-includes
+
+# Source Maps
+*.css.map
+*.js.map
+
+# OS
+*~
+.DS_Store*
+ehthumbs.db
+Thumbs.db
+
+# IDE
+.idea
+.settings
+.project
+.build
+.vscode
+
+# File Types
+*.log
+*.zip
+.svn

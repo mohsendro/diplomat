@@ -1,0 +1,82 @@
+@font-face {
+    font-family: 'dana';
+    src: url('../fonts/dana.eot');
+    /* IE9 Compat Modes */
+    src: url('../fonts/dana.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fonts/dana.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/dana.woff') format('woff'),
+        /* Pretty Modern Browsers */
+        url('../fonts/dana.ttf') format('truetype')
+        /* Safari, Android, iOS */
+}
+
+@font-face {
+    font-family: 'iransans';
+    src: url('../fonts/iransans.eot');
+    /* IE9 Compat Modes */
+    src: url('../fonts/iransans.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('../fonts/iransans.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('../fonts/iransans.woff') format('woff'),
+        /* Pretty Modern Browsers */
+        url('../fonts/iransans.ttf') format('truetype')
+        /* Safari, Android, iOS */
+}
+
+@font-face {
+    font-family: 'iransans-dn';
+    src: url('fonts/iransans-dn.eot');
+    /* IE9 Compat Modes */
+    src: url('fonts/iransans-dn.eot?#iefix') format('embedded-opentype'),
+        /* IE6-IE8 */
+        url('fonts/iransans-dn.woff2') format('woff2'),
+        /* Super Modern Browsers */
+        url('fonts/iransans-dn.woff') format('woff'),
+        /* Pretty Modern Browsers */
+        url('fonts/iransans-dn.ttf') format('truetype')
+        /* Safari, Android, iOS */
+}
+
+body.login {
+    font-family: 'iransans' !important;
+    background: #e5ecf2 !important;
+}
+
+body.login div#login {}
+
+body.login div#login h1 {}
+
+body.login div#login h1 a {
+    height: 84px;
+}
+
+body.login div#login form#loginform {}
+
+body.login div#login form#loginform p {}
+
+body.login div#login form#loginform p label {}
+
+body.login div#login form#loginform input {}
+
+body.login div#login form#loginform input#user_login {}
+
+body.login div#login form#loginform input#user_pass {}
+
+body.login div#login form#loginform p.forgetmenot {}
+
+body.login div#login form#loginform p.forgetmenot input#rememberme {}
+
+body.login div#login form#loginform p.submit {}
+
+body.login div#login form#loginform p.submit input#wp-submit {}
+
+body.login div#login p#nav {}
+
+body.login div#login p#nav a {}
+
+body.login div#login p#backtoblog {}
+
+body.login div#login p#backtoblog a {}
