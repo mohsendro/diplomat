@@ -163,3 +163,132 @@ require_once plugin_dir_path(__FILE__) . 'functions/menu/counseling.php';
 // require_once plugin_dir_path(__FILE__) . 'functions/table/expert.php';
 // require_once plugin_dir_path(__FILE__) . 'functions/table/request.php';
 // require_once plugin_dir_path(__FILE__) . 'functions/table/counseling.php';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+* Enqueue Styles && Scripts
+*/
+/*
+function wpplus_enqueuing_admin_styles_scripts() {
+ 
+	wp_register_style( 'admin-style', plugin_dir_url(__FILE__) . 'typerocket/resources/assets/admin/admin.css', false, '4.2.1' );
+	wp_enqueue_style( 'admin-style' );
+
+    wp_register_script( 'admin-script', plugin_dir_url(__FILE__) . 'typerocket/resources/assets/admin/admin.js', false, '1.0.0' );
+	wp_enqueue_script( 'admin-script' );
+
+}
+
+function wpplus_enqueuing_public_styles_scripts() {
+
+	wp_register_style( 'public-style', plugin_dir_url(__FILE__) . 'typerocket/resources/assets/public/public.css', false, '4.2.1' );
+	wp_enqueue_style( 'public-style' );
+
+    wp_register_script( 'public-script', plugin_dir_url(__FILE__) . 'typerocket/resources/assets/public/public.js', array('jquery'), '1.0.0' );
+	wp_enqueue_script( 'public-script' );
+
+}
+
+add_action( 'admin_enqueue_scripts', 'wpplus_enqueuing_admin_styles_scripts' );
+add_action( 'wp_enqueue_scripts', 'wpplus_enqueuing_public_styles_scripts' );
+*/
+
+
+
+/*
+* ToJob Ajax Form Handler
+*/
+/*
+function dcwd_ajax_enqueue_script() {
+	// wp_enqueue_script( 'script_handle', plugin_dir_url(__FILE__) . 'typerocket/resources/assets/public/public.js', array('jquery') );
+    wp_localize_script( 'public-script', 'tojob_ajax_localize_obj', array(
+                      'ajax_url' => admin_url( 'admin-ajax.php' ),
+                      'the_nonce' => wp_create_nonce('tojob_form_nonce') 
+	));
+}
+add_action( 'wp_enqueue_scripts', 'dcwd_ajax_enqueue_script' );
+
+
+function tojob_ajax_handle_function() {
+    check_ajax_referer( 'tojob_form_nonce', 'submitted_nonce' );  // This function will die if submitted_nonce is not correct.
+
+    //$post_type = sanitize_text_field($_POST['post_type']);  
+
+    // global $wpdb;
+    // $table_to_job = $wpdb->prefix . 'to_jobs';
+    // $wpdb->insert( 
+    //     $table_to_job, 
+    //     array( 
+    //         'user_id' => 1, 
+    //         'job_id' => 2, 
+    //         'content' => 'Test', 
+    //     ), 
+    //     array( 
+    //         '%d', 
+    //         '%d', 
+    //         '%s', 
+    //     )
+    // );
+
+    $to_job = new App\Models\ToJob();
+    $to_job->user_id = sanitize_text_field($_POST['toJobUserID']);
+    $to_job->job_id  = sanitize_text_field($_POST['toJobJobID']);
+    $to_job->content = sanitize_text_field($_POST['toJobContent']);
+    $to_job->save(); 
+
+    $response = array(
+        'success'   => 'درخواست با موفقیت ارسال شد',
+    );
+
+    wp_send_json_success( $response, 200 );
+    
+    wp_send_json_error();
+    wp_die();
+
+}
+// add_action( 'wp_ajax_nopriv_tojob_ajax_handle', 'tojob_ajax_handle_function' );
+add_action( 'wp_ajax_tojob_ajax_handle', 'tojob_ajax_handle_function' );  // For logged in users.
+*/
+
+
+
+// function toJobAjaxJs() {
+
+// 	let toJobUserID  = document.getElementById('to-job-user-id').value;
+// 	let toJobJobID   = document.getElementById('to-job-job-id').value;
+// 	let toJobContent = document.getElementById('to-job-content').value;
+	
+// 	jQuery.ajax({
+// 		url : tojob_ajax_localize_obj.ajax_url,
+// 		type : 'post',
+// 		dataType: 'json',
+// 		data : {
+// 			action : 'tojob_ajax_handle',
+// 			submitted_nonce : tojob_ajax_localize_obj.the_nonce,
+// 			toJobUserID  : toJobUserID,
+// 			toJobJobID   : toJobJobID,
+// 			toJobContent : toJobContent,
+// 		},
+// 		success : function( response ) {
+// 			alert( response.data.success );
+// 			console.log( response );
+// 		},
+// 		error : function( response ) {
+// 			alert('Error retrieving the information: ' + response.status + ' ' + response.statusText);
+// 			console.log( response );
+// 		}
+// 	});
+	
+// }

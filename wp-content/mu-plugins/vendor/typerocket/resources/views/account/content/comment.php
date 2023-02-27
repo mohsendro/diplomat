@@ -3,10 +3,8 @@
 if ( ! defined( 'ABSPATH' ) ) { die; } // Cannot access directly.
 
 ?>
-<h1>Ticket</h1>
+<h1>Comment</h1>
 
-
-<?php do_shortcode('[nirweb_ticket]'); ?>
 
 
 

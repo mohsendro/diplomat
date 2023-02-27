@@ -53,14 +53,34 @@ class AccountController extends Controller
 
             switch ( $endpoint ) {
     
+                case 'vip':
+                    $endpoint = 'vip';
+                    break;
+    
+                case 'wishlist':
+                    $endpoint = 'wishlist';
+                    break;
+    
+                case 'comment':
+                    $endpoint = 'comment';
+                    break;
+
                 case 'ticket':
                     $endpoint = 'ticket';
                     break;
-    
+
+                case 'expert':
+                    $endpoint = 'expert';
+                    break;
+
+                case 'request':
+                    $endpoint = 'request';
+                    break;
+
                 case 'edit':
                     $endpoint = 'edit';
                     break;
-    
+
                 default:
                     $redirect = tr_redirect();
                     $redirect->toUrl( home_url('/account/') )->now();
