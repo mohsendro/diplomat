@@ -6,17 +6,17 @@ function wpplus_enqueue_scripts() {
 
 	wp_register_style( 'account-style', TYPEROCKET_DIR_URL . 'resources/assets/css/theme.css', false, '1.0.0' );
 	wp_register_script( 'account-script', TYPEROCKET_DIR_URL . 'resources/assets/js/theme.js', false, '1.0.0' );
-	wp_register_script( 'ajax-acount-script', TYPEROCKET_DIR_URL . 'resources/assets/js/ajax-acount-edit.js', false, '1.0.0' );
+	wp_register_script( 'ajax-acount-script', TYPEROCKET_DIR_URL . 'resources/assets/js/ajax-acount.js', false, '1.0.0' );
 	// wp_enqueue_style( 'account-style' );
 	// wp_enqueue_script( 'account-script' );
+    wp_enqueue_script( 'ajax-acount-script' );
 
 
     // Ajax Handler
-    // wp_enqueue_script( 'ajax-acount-script', plugin_dir_url(__FILE__) . 'typerocket/resources/assets/public/public.js', array('jquery') );
     wp_localize_script(
-        'public-script', 'tojob_ajax_localize_obj', array(
+        'ajax-acount-script', 'account_ajax_localize_obj', array(
             'ajax_url' => admin_url( 'admin-ajax.php' ),
-            'the_nonce' => wp_create_nonce('tojob_form_nonce') 
+            'the_nonce' => wp_create_nonce('account_form_nonce') 
         )
     );
 
