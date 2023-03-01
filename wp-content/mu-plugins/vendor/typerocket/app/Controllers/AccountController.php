@@ -137,29 +137,36 @@ class AccountController extends Controller
         $option = $option->find()->where($where)->select('option_value')->get()->toArray();
         $option = $option[0]['option_value'];
 
-        $condition = [
-            [
-                'column'   => 'post_status',
-                'operator' => '=',
-                'value'    => 'publish'
-            ],
-            'AND',
-            [
-                'ID'       => 'post_status',
-                'operator' => '=',
-                'value'    => 'publish'
-            ]
-        ];
-        $posts = $post->findAll()->where($condition)->orderBy('id', 'DESC');
+        $posts = $post->find($wishlist)->where('post_status', '=', 'publish')->orderBy('id', 'DESC');
         $posts_data = $posts; 
         $posts = $posts->get();
-
+        
         if( $posts != null || $posts > 0 ) {
 
             $count = $posts->count();
             $total_page = ceil($count / $option);
-            $current_page = 1;
-            $posts = $posts_data->take($option, 0)->get();
+
+            if( intval($_GET['page']) ) {
+                $current_page = $_GET['page'];
+            } else {
+                $current_page = 1;
+            } 
+            
+            if( intval($_GET['page']) ) {
+                if( (intval($_GET['page']) <= $total_page) && (intval($_GET['page']) >= 1) ) {
+                    $posts = $posts_data->take($option, (intval($_GET['page'])-1)*$option)->get();
+                    if( $_GET['page'] == 1 ) {
+                        // $posts = $posts->take($option, 1);
+                        tr_redirect()->toURL(home_url('/account/wishlist/'))->now();
+                    }
+                } else {
+                    // $posts = $posts->take($option, $_GET['page']);
+                    // tr_redirect()->toURL(home_url('/blog/'))->now();
+                    return include( get_query_template( '404' ) );
+                } 
+            } else {
+                $posts = $posts_data->take($option, 0)->get();
+            }
 
         } else {
 
@@ -168,9 +175,9 @@ class AccountController extends Controller
             $total_page = 0;
             $current_page = 0;
             
-        }     
+        }   
 
-        return tr_view('account.content.wishlist', compact('wishlist', 'posts', 'count', 'total_page', 'current_page') );
+        return tr_view('account.content.wishlist', compact('posts', 'count', 'total_page', 'current_page', 'param') );
 
     }
 
@@ -226,6 +233,5 @@ class AccountController extends Controller
 
         return tr_view('account.content.edit', compact('user_info', 'response'));
 
-    }
-    
+    }   
 }

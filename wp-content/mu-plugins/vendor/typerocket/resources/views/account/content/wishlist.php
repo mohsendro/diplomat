@@ -12,7 +12,22 @@ if ( ! defined( 'ABSPATH' ) ) { die; } // Cannot access directly.
 		</div>
 		<div class="col-md-8" style="background: #a3d1f1;">
 			
-            <?php var_dump( $wishlist ); ?>
+			<h5>آگهی های محبوب<span>: <?php echo $count; ?> نتیجه</span></h5> 
+            <?php
+				if( !$posts ) echo "محتوایی وجود ندارد"; 
+				foreach ($posts as $post) {
+					echo $post->ID . ' | ' ;
+					echo "<a href='" . get_permalink($post->ID) . "'>" . $post->post_title . "</a>";
+					echo "<br>";
+				}
+				echo "<hr>";
+			?>
+
+			<?php
+				require TYPEROCKET_DIR_PATH . '/functions/snippets/pagination.php';
+				// pagination_post($count, $total_page, 2, $current_page);
+				insertSearchPagination(home_url('account/wishlist/'), $current_page, $total_page, true);
+			?>
 
 		</div>
 	</div>
