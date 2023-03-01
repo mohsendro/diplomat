@@ -7,36 +7,8 @@ if ( ! defined( 'ABSPATH' ) ) { die; } // Cannot access directly.
 
 <?php
     //echo do_shortcode('[dm-edit-phone]');
-    $response = tr_redirect_message();
-    if( $response ) {
+    
 
-        switch ( $response ) {
-            case $response['type'] == 100:
-                echo "<div style='background: #d8fbd8; padding: 10px; border-right: 2px solid #4dc54d;'>" . $response['message'] . "</div>";
-                break;
-
-            case $response['type'] == 200:
-                echo "<div style='background: #d8fbd8; padding: 10px; border-right: 2px solid #4dc54d;'>" . $response['message'] . "</div>";
-                break;
-
-            case $response['type'] == 300:
-                echo "<div style='background: #d8fbd8; padding: 10px; border-right: 2px solid #4dc54d;'>" . $response['message'] . "</div>";
-                break;
-
-            case $response['type'] == 400:
-                echo "<div style='background: #d8fbd8; padding: 10px; border-right: 2px solid #4dc54d;'>" . $response['message'] . "</div>";
-                break;
-
-            case $response['type'] == 500:
-                echo "<div style='background: #d8fbd8; padding: 10px; border-right: 2px solid #4dc54d;'>" . $response['message'] . "</div>";
-                break;    
-
-            default:
-                # code...
-                break;
-        }
-
-    }
 ?>
 
 <div class="container-fluid">
@@ -45,6 +17,39 @@ if ( ! defined( 'ABSPATH' ) ) { die; } // Cannot access directly.
             <?php include plugin_dir_path(__FILE__) . '../tabs.php'; ?>
 		</div>
 		<div class="col-md-8" style="background: #a3d1f1;">
+
+            <?php
+                if( $response ) {
+
+                    switch ( $response ) {
+                        case $response['type'] == 100:
+                            echo "<div style='background: #fbfad8; padding: 10px; border-right: 2px solid #f3b300;'>" . $response['message'] . "</div>";
+                            break;
+            
+                        case $response['type'] == 200:
+                            echo "<div style='background: #d8fbd8; padding: 10px; border-right: 2px solid #4dc54d;'>" . $response['message'] . "</div>";
+                            break;
+            
+                        case $response['type'] == 300:
+                            echo "<div style='background: #d8fbd8; padding: 10px; border-right: 2px solid #4dc54d;'>" . $response['message'] . "</div>";
+                            break;
+            
+                        case $response['type'] == 400:
+                            echo "<div style='background: #fbd8d8; padding: 10px; border-right: 2px solid #f3000b;'>" . $response['message'] . "</div>";
+                            break;
+            
+                        case $response['type'] == 500:
+                            echo "<div style='background: #fbd8d8; padding: 10px; border-right: 2px solid #f3000b;'>" . $response['message'] . "</div>";
+                            break;    
+            
+                        default:
+                            # code...
+                            break;
+                    }
+            
+                }
+                $user_meta = get_user_meta( $user_info->data->ID );
+            ?>
 			
             <?php $EditForm = tr_form('post'); ?>   
                 <?php $EditFormButton = 'ویرایش اطلاعات'; ?> 

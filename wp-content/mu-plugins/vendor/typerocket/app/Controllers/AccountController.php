@@ -2,6 +2,8 @@
 namespace App\Controllers;
 
 use App\Models\User;
+use App\Models\Advertising;
+use App\Models\Option;
 use TypeRocket\Controllers\Controller;
 use TypeRocket\Http\Request;
 
@@ -119,12 +121,56 @@ class AccountController extends Controller
      *
      * @return mixed
      */
-    public function wishlist()
+    public function wishlist(Advertising $post, Option $option)
     {
 
         $user_id  = get_current_user_id();
         $wishlist = get_user_meta( $user_id, 'favoriteAdvertising', true );
-        return tr_view('account.content.wishlist', compact('wishlist') );
+
+        $where = [
+            [
+                'column'   => 'option_name',
+                'operator' => '=',
+                'value'    => 'posts_per_page'
+            ]
+        ];
+        $option = $option->find()->where($where)->select('option_value')->get()->toArray();
+        $option = $option[0]['option_value'];
+
+        $condition = [
+            [
+                'column'   => 'post_status',
+                'operator' => '=',
+                'value'    => 'publish'
+            ],
+            'AND',
+            [
+                'ID'       => 'post_status',
+                'operator' => '=',
+                'value'    => 'publish'
+            ]
+        ];
+        $posts = $post->findAll()->where($condition)->orderBy('id', 'DESC');
+        $posts_data = $posts; 
+        $posts = $posts->get();
+
+        if( $posts != null || $posts > 0 ) {
+
+            $count = $posts->count();
+            $total_page = ceil($count / $option);
+            $current_page = 1;
+            $posts = $posts_data->take($option, 0)->get();
+
+        } else {
+
+            $posts = [];
+            $count = 0;
+            $total_page = 0;
+            $current_page = 0;
+            
+        }     
+
+        return tr_view('account.content.wishlist', compact('wishlist', 'posts', 'count', 'total_page', 'current_page') );
 
     }
 
@@ -159,19 +205,26 @@ class AccountController extends Controller
 
             }       
             
-            $message = ['اطلاعات کاربری شما بروزرسانی شد', 200];
+            $response = [
+                'message' => 'اطلاعات کاربری شما بروزرسانی شد',
+                'type'    => 200
+            ];
             // $redirect = tr_redirect()->withMessage('اطلاعات کاربری شما بروزرسانی شد', 200);
-            // $redirect->toUrl( home_url('/account/edit/') )->now();
+            $redirect = tr_redirect();
+            $redirect->toUrl( home_url('/account/edit/') )->now();
             
         } else {
 
-            $message = ['مشکلی رخ داد، لطفاً مجدداً امتحان نمایید', 400];
+            $response = [
+                // 'message' => 'مشکلی رخ داد، لطفاً مجدداً امتحان نمایید',
+                // 'type'    => 400
+            ];
             // $redirect = tr_redirect()->withMessage('مشکلی رخ داد، لطفاً مجدداً امتحان نمایید', 400);
             // $redirect->toUrl( home_url('/account/edit/') )->now();           
 
         }
 
-        return tr_view('account.content.edit', compact('user_info', 'user_meta', 'message'));
+        return tr_view('account.content.edit', compact('user_info', 'response'));
 
     }
     
