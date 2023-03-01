@@ -70,5 +70,8 @@ tr_route()->get()->match('/search/([^\/]+)', ['param'])->do('archive@SearchContr
 
 // Account
 tr_route()->get()->match('/login')->do('login@AccountController')->middleware('LoggedInUser');
-tr_route()->get()->match('/account')->do('account@AccountController')->middleware('LoggedInUser');
-tr_route()->get()->match('/account/([^\/]+)', ['endpoint'])->do('account@AccountController')->middleware('LoggedInUser');
+// tr_route()->get()->match('/account/([^\/]+)', ['endpoint'])->do('account@AccountController')->middleware('LoggedInUser');
+tr_route()->get()->match('/account')->do('dashboard@AccountController')->middleware('LoggedInUser'); // Account Dashboard Form
+tr_route()->get()->match('/account/wishlist')->do('wishlist@AccountController')->middleware('LoggedInUser'); // Account Wishlist Form
+tr_route()->get()->match('/account/edit')->do('edit@AccountController')->middleware('LoggedInUser'); // Account Edit Form
+tr_route()->post()->match('/account/edit')->do('edit@AccountController')->middleware('LoggedInUser'); // Account Edit Form
