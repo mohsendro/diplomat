@@ -1,9 +1,10 @@
 <?php
 namespace App\Controllers;
 
+use App\Models\Option;
 use App\Models\User;
 use App\Models\Advertising;
-use App\Models\Option;
+use App\Models\Comment;
 use TypeRocket\Controllers\Controller;
 use TypeRocket\Http\Request;
 
@@ -121,6 +122,77 @@ class AccountController extends Controller
      *
      * @return mixed
      */
+    public function vip(Advertising $post, Option $option)
+    {
+
+        $user_id  = get_current_user_id();
+        $user_vip = get_user_meta( $user_id, 'vip', true );
+
+        if( ! $user_vip ) {
+
+            return tr_view('account.content.vip', compact('user_vip') );
+
+        }
+
+        $where = [
+            [
+                'column'   => 'option_name',
+                'operator' => '=',
+                'value'    => 'posts_per_page'
+            ]
+        ];
+        $option = $option->find()->where($where)->select('option_value')->get()->toArray();
+        $option = $option[0]['option_value'];
+
+        $posts = $post->findAll()->with('meta')->whereMeta('vip', '=', 1)->where('post_status', '=', 'publish')->orderBy('id', 'DESC');
+        $posts_data = $posts; 
+        $posts = $posts->get();
+        
+        if( $posts != null || $posts > 0 ) {
+
+            $count = $posts->count();
+            $total_page = ceil($count / $option);
+
+            if( intval($_GET['page']) ) {
+                $current_page = $_GET['page'];
+            } else {
+                $current_page = 1;
+            } 
+            
+            if( intval($_GET['page']) ) {
+                if( (intval($_GET['page']) <= $total_page) && (intval($_GET['page']) >= 1) ) {
+                    $posts = $posts_data->take($option, (intval($_GET['page'])-1)*$option)->get();
+                    if( $_GET['page'] == 1 ) {
+                        // $posts = $posts->take($option, 1);
+                        tr_redirect()->toURL(home_url('/account/vip/'))->now();
+                    }
+                } else {
+                    // $posts = $posts->take($option, $_GET['page']);
+                    // tr_redirect()->toURL(home_url('/blog/'))->now();
+                    return include( get_query_template( '404' ) );
+                } 
+            } else {
+                $posts = $posts_data->take($option, 0)->get();
+            }
+
+        } else {
+
+            $posts = [];
+            $count = 0;
+            $total_page = 0;
+            $current_page = 0;
+            
+        }   
+
+        return tr_view('account.content.vip', compact('posts', 'count', 'total_page', 'current_page', 'param') );
+
+    }
+
+    /**
+     * The index page for admin
+     *
+     * @return mixed
+     */
     public function wishlist(Advertising $post, Option $option)
     {
 
@@ -186,6 +258,81 @@ class AccountController extends Controller
      *
      * @return mixed
      */
+    public function comment(Comment $post, Option $option) {
+
+        $user_id  = get_current_user_id();
+        $wishlist = get_user_meta( $user_id, 'favoriteAdvertising', true );
+
+        $where = [
+            [
+                'column'   => 'option_name',
+                'operator' => '=',
+                'value'    => 'posts_per_page'
+            ]
+        ];
+        $option = $option->find()->where($where)->select('option_value')->get()->toArray();
+        $option = $option[0]['option_value'];
+
+        $posts = $post->findAll()->where('comment_approved', '=', 1)->orderBy('comment_ID', 'DESC');
+        $posts_data = $posts; 
+        $posts = $posts->get();
+        
+        if( $posts != null || $posts > 0 ) {
+
+            $count = $posts->count();
+            $total_page = ceil($count / $option);
+
+            if( intval($_GET['page']) ) {
+                $current_page = $_GET['page'];
+            } else {
+                $current_page = 1;
+            } 
+            
+            if( intval($_GET['page']) ) {
+                if( (intval($_GET['page']) <= $total_page) && (intval($_GET['page']) >= 1) ) {
+                    $posts = $posts_data->take($option, (intval($_GET['page'])-1)*$option)->get();
+                    if( $_GET['page'] == 1 ) {
+                        // $posts = $posts->take($option, 1);
+                        tr_redirect()->toURL(home_url('/account/comment/'))->now();
+                    }
+                } else {
+                    // $posts = $posts->take($option, $_GET['page']);
+                    // tr_redirect()->toURL(home_url('/blog/'))->now();
+                    return include( get_query_template( '404' ) );
+                } 
+            } else {
+                $posts = $posts_data->take($option, 0)->get();
+            }
+
+        } else {
+
+            $posts = [];
+            $count = 0;
+            $total_page = 0;
+            $current_page = 0;
+            
+        }   
+
+        return tr_view('account.content.comment', compact('posts', 'count', 'total_page', 'current_page', 'param') );
+
+    }
+
+    /**
+     * The index page for admin
+     *
+     * @return mixed
+     */
+    public function ticket() {
+
+        return tr_view('account.content.ticket');
+
+    }
+
+    /**
+     * The index page for admin
+     *
+     * @return mixed
+     */
     public function edit(Request $request, User $user)
     {
 
@@ -231,7 +378,7 @@ class AccountController extends Controller
 
         }
 
-        return tr_view('account.content.edit', compact('user_info', 'response'));
+        return tr_view('account.content.edit', compact('user_info', 'response') );
 
     }   
 }

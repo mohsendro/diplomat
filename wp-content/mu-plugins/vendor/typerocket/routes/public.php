@@ -72,6 +72,9 @@ tr_route()->get()->match('/search/([^\/]+)', ['param'])->do('archive@SearchContr
 tr_route()->get()->match('/login')->do('login@AccountController')->middleware('LoggedInUser');
 // tr_route()->get()->match('/account/([^\/]+)', ['endpoint'])->do('account@AccountController')->middleware('LoggedInUser');
 tr_route()->get()->match('/account')->do('dashboard@AccountController')->middleware('LoggedInUser'); // Account Dashboard Form
+tr_route()->get()->match('/account/vip')->do('vip@AccountController')->middleware('LoggedInUser'); // Account Wishlist Form
 tr_route()->get()->match('/account/wishlist')->do('wishlist@AccountController')->middleware('LoggedInUser'); // Account Wishlist Form
+tr_route()->get()->match('/account/comment')->do('comment@AccountController')->middleware('LoggedInUser'); // Account Comment Form
+tr_route()->get()->match('/account/ticket')->do('ticket@AccountController')->middleware('LoggedInUser'); // Account Ticket Form
 tr_route()->get()->match('/account/edit')->do('edit@AccountController')->middleware('LoggedInUser'); // Account Edit Form
 tr_route()->post()->match('/account/edit')->do('edit@AccountController')->middleware('LoggedInUser'); // Account Edit Form
