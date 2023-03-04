@@ -1,34 +1,330 @@
 @font-face {
   font-family: 'dana';
-  src: url('../fonts/dana.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/dana.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/dana.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/dana.woff') format('woff'), /* Pretty Modern Browsers */
-       url('../fonts/dana.ttf')  format('truetype') /* Safari, Android, iOS */
+  src: url('../fonts/dana.eot');
+  /* IE9 Compat Modes */
+  src: url('../fonts/dana.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */
+    url('../fonts/dana.woff2') format('woff2'),
+    /* Super Modern Browsers */
+    url('../fonts/dana.woff') format('woff'),
+    /* Pretty Modern Browsers */
+    url('../fonts/dana.ttf') format('truetype')
+    /* Safari, Android, iOS */
 }
+
 @font-face {
   font-family: 'iransans';
-  src: url('../fonts/iransans.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/iransans.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/iransans.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/iransans.woff') format('woff'), /* Pretty Modern Browsers */
-       url('../fonts/iransans.ttf')  format('truetype') /* Safari, Android, iOS */
+  src: url('../fonts/iransans.eot');
+  /* IE9 Compat Modes */
+  src: url('../fonts/iransans.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */
+    url('../fonts/iransans.woff2') format('woff2'),
+    /* Super Modern Browsers */
+    url('../fonts/iransans.woff') format('woff'),
+    /* Pretty Modern Browsers */
+    url('../fonts/iransans.ttf') format('truetype')
+    /* Safari, Android, iOS */
 }
+
 @font-face {
   font-family: 'iransans-dn';
-  src: url('fonts/iransans-dn.eot'); /* IE9 Compat Modes */
-  src: url('fonts/iransans-dn.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('fonts/iransans-dn.woff2') format('woff2'), /* Super Modern Browsers */
-       url('fonts/iransans-dn.woff') format('woff'), /* Pretty Modern Browsers */
-       url('fonts/iransans-dn.ttf')  format('truetype') /* Safari, Android, iOS */
+  src: url('fonts/iransans-dn.eot');
+  /* IE9 Compat Modes */
+  src: url('fonts/iransans-dn.eot?#iefix') format('embedded-opentype'),
+    /* IE6-IE8 */
+    url('fonts/iransans-dn.woff2') format('woff2'),
+    /* Super Modern Browsers */
+    url('fonts/iransans-dn.woff') format('woff'),
+    /* Pretty Modern Browsers */
+    url('fonts/iransans-dn.ttf') format('truetype')
+    /* Safari, Android, iOS */
 }
-body.rtl, body.rtl .press-this a.wp-switch-editor,#danafy-list-plugins, #danafy-list-demo, #danafy-document, #wpadminbar .quicklinks>ul>li>a, #wpadminbar ul li:last-child, #wpadminbar ul li:last-child .ab-item, #wpadminbar .ab-label, span.display-name, a.ab-item, .rtl h1, .rtl h2, .rtl h3, .rtl h4, .rtl h5, .rtl h6{
-  font-family: 'iransans'!important;
+
+body.rtl,
+body.rtl .press-this a.wp-switch-editor,
+#danafy-list-plugins,
+#danafy-list-demo,
+#danafy-document,
+#wpadminbar .quicklinks>ul>li>a,
+#wpadminbar ul li:last-child,
+#wpadminbar ul li:last-child .ab-item,
+#wpadminbar .ab-label,
+span.display-name,
+a.ab-item,
+.rtl h1,
+.rtl h2,
+.rtl h3,
+.rtl h4,
+.rtl h5,
+.rtl h6 {
+  font-family: 'iransans' !important;
   text-align: right;
-}  
-.css-wdf2ti-Wrapper, .block-editor-inserter__search input[type=search].block-editor-inserter__search-input, .components-notice-list .components-notice__content, .components-modal__frame *, .components-modal__frame :after, .components-modal__frame :before, .components-popover *, .components-popover :after, .components-popover :before, .edit-post-header *, .edit-post-header :after, .edit-post-header :before, .edit-post-layout__inserter-panel *, .edit-post-layout__inserter-panel :after, .edit-post-layout__inserter-panel :before, .edit-post-sidebar *, .edit-post-sidebar :after, .edit-post-sidebar :before, .edit-post-text-editor *, .edit-post-text-editor :after, .edit-post-text-editor :before, .edit-post-visual-editor *, .edit-post-visual-editor :after, .edit-post-visual-editor :before, .editor-post-publish-panel *, .editor-post-publish-panel :after, .editor-post-publish-panel :before, .block-editor-link-control .block-editor-link-control__search-input.block-editor-link-control__search-input input[type=text], .rtl .media-frame, .rtl .media-frame .search, .rtl .media-frame input[type=email], .rtl .media-frame input[type=number], .rtl .media-frame input[type=password], .rtl .media-frame input[type=search], .rtl .media-frame input[type=tel], .rtl .media-frame input[type=text], .rtl .media-frame input[type=url], .rtl .media-frame select, .rtl .media-frame textarea, .rtl .media-modal{
-  font-family: 'iransans'!important;
-} 
+}
+
+.css-wdf2ti-Wrapper,
+.block-editor-inserter__search input[type=search].block-editor-inserter__search-input,
+.components-notice-list .components-notice__content,
+.components-modal__frame *,
+.components-modal__frame :after,
+.components-modal__frame :before,
+.components-popover *,
+.components-popover :after,
+.components-popover :before,
+.edit-post-header *,
+.edit-post-header :after,
+.edit-post-header :before,
+.edit-post-layout__inserter-panel *,
+.edit-post-layout__inserter-panel :after,
+.edit-post-layout__inserter-panel :before,
+.edit-post-sidebar *,
+.edit-post-sidebar :after,
+.edit-post-sidebar :before,
+.edit-post-text-editor *,
+.edit-post-text-editor :after,
+.edit-post-text-editor :before,
+.edit-post-visual-editor *,
+.edit-post-visual-editor :after,
+.edit-post-visual-editor :before,
+.editor-post-publish-panel *,
+.editor-post-publish-panel :after,
+.editor-post-publish-panel :before,
+.block-editor-link-control .block-editor-link-control__search-input.block-editor-link-control__search-input input[type=text],
+.rtl .media-frame,
+.rtl .media-frame .search,
+.rtl .media-frame input[type=email],
+.rtl .media-frame input[type=number],
+.rtl .media-frame input[type=password],
+.rtl .media-frame input[type=search],
+.rtl .media-frame input[type=tel],
+.rtl .media-frame input[type=text],
+.rtl .media-frame input[type=url],
+.rtl .media-frame select,
+.rtl .media-frame textarea,
+.rtl .media-modal {
+  font-family: 'iransans' !important;
+}
+
 .csf-nav-normal+.csf-content {
-  margin-left: 0!important;
+  margin-left: 0 !important;
+}
+
+
+
+/* admin-model  */
+.modal {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: left;
+  background: rgb(0 0 0 / 30%);
+  transition: opacity .25s ease;
+}
+
+.modal__bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.modal-state {
+  display: none;
+}
+
+.modal-state:checked+.modal {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-state:checked+.modal .modal__inner {
+  top: 0;
+}
+
+.modal__inner {
+  transition: top .25s ease;
+  position: absolute;
+  top: -20%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  margin: auto;
+  overflow: auto;
+  background: #fff;
+  border-radius: 5px;
+  padding: 1em 2em;
+  height: 50%;
+}
+
+.modal__close {
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  width: 1.1em;
+  height: 1.1em;
+  cursor: pointer;
+}
+
+.modal__close:after,
+.modal__close:before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 1.5em;
+  background: #ccc;
+  display: block;
+  transform: rotate(45deg);
+  left: 50%;
+  margin: -3px 0 0 -1px;
+  top: 0;
+}
+
+.modal__close:hover:after,
+.modal__close:hover:before {
+  background: #aaa;
+}
+
+.modal__close:before {
+  transform: rotate(-45deg);
+}
+
+@media screen and (max-width: 768px) {
+
+  .modal__inner {
+    width: 90%;
+    height: 90%;
+    box-sizing: border-box;
+  }
+}
+
+.admin-model .modal {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: left;
+  background: rgb(0 0 0 / 30%);
+  transition: opacity .25s ease;
+}
+
+.admin-model .modal__bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.admin-model .modal-state {
+  display: none;
+}
+
+.admin-model .modal-state:checked+.modal {
+  opacity: 1;
+  visibility: visible;
+  z-index: 1;
+}
+
+.admin-model .modal-state:checked+.modal .modal__inner {
+  top: 0;
+}
+
+.admin-model .modal__inner {
+  transition: top .25s ease;
+  position: absolute;
+  top: -20%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  margin: auto;
+  overflow: auto;
+  background: #fff;
+  border-radius: 5px;
+  padding: 1em 2em;
+  height: 50%;
+  text-align: right;
+}
+
+.admin-model .modal__close {
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  width: 1.1em;
+  height: 1.1em;
+  cursor: pointer;
+}
+
+.admin-model .modal__close:after,
+.admin-model .modal__close:before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 1.5em;
+  background: #ccc;
+  display: block;
+  transform: rotate(45deg);
+  left: 50%;
+  margin: -3px 0 0 -1px;
+  top: 0;
+}
+
+.admin-model .modal__close:hover:after,
+.admin-model .modal__close:hover:before {
+  background: #aaa;
+}
+
+.admin-model .modal__close:before {
+  transform: rotate(-45deg);
+}
+
+@media screen and (max-width: 768px) {
+
+  .admin-model .modal__inner {
+    width: 90%;
+    height: 90%;
+    box-sizing: border-box;
+  }
+}
+
+.admin-model .btn {
+  cursor: pointer;
+  background: #27ae60;
+  display: inline-block;
+  padding: .5em 1em;
+  color: #fff;
+  border-radius: 3px;
+}
+
+.admin-model .btn:hover,
+.admin-model .btn:focus {
+  background: #2ecc71;
+}
+
+.admin-model .btn:active {
+  background: #27ae60;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .2) inset;
+}
+
+.admin-model .btn--blue {
+  background: #2980b9;
+}
+
+.admin-model .btn--blue:hover,
+.admin-model .btn--blue:focus {
+  background: #3498db;
+}
+
+.admin-model .btn--blue:active {
+  background: #2980b9;
 }

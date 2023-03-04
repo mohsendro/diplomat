@@ -13,7 +13,11 @@ class FormExpertController extends Controller
      */
     public function index()
     {
-        // TODO: Implement index() method.
+
+        // $form_expert = (new \App\Models\FormExpert())->findAll()->orderBy('ID', 'DESC')->get();
+        $form_expert = FormExpert::new()->findAll()->orderBy('ID', 'DESC')->get()->toArray();;
+        return $form_expert;
+        
     }
 
     /**
