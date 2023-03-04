@@ -3,11 +3,7 @@
 if ( ! defined( 'ABSPATH' ) ) { die; } // Cannot access directly.
 
 ?>
-<h1>Edit</h1>
-
-<?php
-    //echo do_shortcode('[dm-edit-phone]');
-?>
+<h1>Add Expert</h1>
 
 <div class="container-fluid">
 	<div class="row">
@@ -15,8 +11,10 @@ if ( ! defined( 'ABSPATH' ) ) { die; } // Cannot access directly.
             <?php include plugin_dir_path(__FILE__) . '../tabs.php'; ?>
 		</div>
 		<div class="col-md-8" style="background: #a3d1f1;">
+			
+			<a href="<?php echo get_home_url() . '/account/expert/'?>"><button class="btn" style="border: 1px solid #3858e9; color: #3858e9;">بازگشت به درخواست‌ها</button></a>
 
-            <?php
+			<?php
                 if( $response ) {
 
                     switch ( $response ) {

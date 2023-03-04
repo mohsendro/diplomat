@@ -5,6 +5,7 @@ use App\Models\Option;
 use App\Models\User;
 use App\Models\Advertising;
 use App\Models\Comment;
+use App\Models\FormExpert;
 use TypeRocket\Controllers\Controller;
 use TypeRocket\Http\Request;
 
@@ -393,4 +394,130 @@ class AccountController extends Controller
         return tr_view('account.content.edit', compact('user_info', 'response') );
 
     }   
+
+    /**
+     * The index page for admin
+     *
+     * @return mixed
+     */
+    public function expert(FormExpert $form_expert, Option $option, Request $request, User $user)
+    {
+        
+        if( $_GET['action'] && $_GET['action'] == 'add' ) {
+
+            $user_info = wp_get_current_user();
+            $user_meta = get_user_meta( $user_info->data->ID );
+            $request_edit = $request;
+
+            if( $request_edit->checkNonce() ) {
+
+                $user = $user->findById($request_edit->getDataPost('user_id'));
+                $user->display_name = $request_edit->getDataPost('display_name');
+                $user->user_email = $request_edit->getDataPost('email');
+                $user->update();
+
+                $meta_keys = [
+                    'first_name' => $request_edit->getDataPost('first_name'),
+                    'last_name'  => $request_edit->getDataPost('last_name'),
+                ];
+
+                foreach( $meta_keys as $key => $value ) {  
+
+                    $user_meta = tr_query()->table('dip_usermeta')->where('user_id', '=', $request_edit->getDataPost('user_id'))->findAll();
+                    $user_meta->where('meta_key', '=', $key )->update(['meta_value' => $value]);
+
+                }       
+                
+                $response = [
+                    'message' => 'اطلاعات کاربری شما بروزرسانی شد',
+                    'type'    => 200
+                ];
+                // $redirect = tr_redirect()->withMessage('اطلاعات کاربری شما بروزرسانی شد', 200);
+                $redirect = tr_redirect();
+                $redirect->toUrl( home_url('/account/expert/?action=add') )->now();
+                
+            } else {
+
+                $response = [
+                    // 'message' => 'مشکلی رخ داد، لطفاً مجدداً امتحان نمایید',
+                    // 'type'    => 400
+                ];
+                // $redirect = tr_redirect()->withMessage('مشکلی رخ داد، لطفاً مجدداً امتحان نمایید', 400);
+                // $redirect->toUrl( home_url('/account/expert/?action=add') )->now();           
+
+            }
+
+            return tr_view('account.content.expert-add', compact('posts', 'count', 'total_page', 'current_page') );
+
+        }
+
+
+        $user_id  = get_current_user_id();
+
+        $where = [
+            [
+                'column'   => 'option_name',
+                'operator' => '=',
+                'value'    => 'posts_per_page'
+            ]
+        ];
+        $option = $option->find()->where($where)->select('option_value')->get()->toArray();
+        $option = $option[0]['option_value'];
+
+        $where_expert = [
+            [
+                'column'   => 'post_status',
+                'operator' => '=',
+                'value'    => 1
+            ],
+            'AND',
+            [
+                'column'   => 'post_author',
+                'operator' => '=',
+                'value'    => $user_id
+            ]
+        ];
+        $posts = $form_expert->findAll()->where($where_expert)->orderBy('ID', 'DESC');
+        $posts_data = $posts; 
+        $posts = $posts->get();
+        
+        if( $posts != null || $posts > 0 ) {
+
+            $count = $posts->count();
+            $total_page = ceil($count / $option);
+
+            if( intval($_GET['page']) ) {
+                $current_page = $_GET['page'];
+            } else {
+                $current_page = 1;
+            } 
+            
+            if( intval($_GET['page']) ) {
+                if( (intval($_GET['page']) <= $total_page) && (intval($_GET['page']) >= 1) ) {
+                    $posts = $posts_data->take($option, (intval($_GET['page'])-1)*$option)->get();
+                    if( $_GET['page'] == 1 ) {
+                        // $posts = $posts->take($option, 1);
+                        tr_redirect()->toURL(home_url('/account/expert/'))->now();
+                    }
+                } else {
+                    // $posts = $posts->take($option, $_GET['page']);
+                    // tr_redirect()->toURL(home_url('/blog/'))->now();
+                    return include( get_query_template( '404' ) );
+                } 
+            } else {
+                $posts = $posts_data->take($option, 0)->get();
+            }
+
+        } else {
+
+            $posts = [];
+            $count = 0;
+            $total_page = 0;
+            $current_page = 0;
+            
+        }   
+
+        return tr_view('account.content.expert', compact('posts', 'count', 'total_page', 'current_page') );
+
+    } 
 }

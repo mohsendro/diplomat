@@ -78,3 +78,5 @@ tr_route()->get()->match('/account/comment')->do('comment@AccountController')->m
 tr_route()->get()->match('/account/ticket')->do('ticket@AccountController')->middleware('LoggedInUser'); // Account Ticket Form
 tr_route()->get()->match('/account/edit')->do('edit@AccountController')->middleware('LoggedInUser'); // Account Edit Form
 tr_route()->post()->match('/account/edit')->do('edit@AccountController')->middleware('LoggedInUser'); // Account Edit Form
+tr_route()->get()->match('/account/expert')->do('expert@AccountController')->middleware('LoggedInUser'); // Account Expert Form
+tr_route()->post()->match('/account/expert')->do('expert@AccountController')->middleware('LoggedInUser'); // Account Expert Form
