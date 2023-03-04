@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Models\Advertising;
 use App\Models\Comment;
 use App\Models\FormExpert;
+use App\Models\FormRequest;
 use TypeRocket\Controllers\Controller;
 use TypeRocket\Http\Request;
 
@@ -400,41 +401,30 @@ class AccountController extends Controller
      *
      * @return mixed
      */
-    public function expert(FormExpert $form_expert, Option $option, Request $request, User $user)
+    public function expert(FormExpert $form_expert, Option $option, Request $request)
     {
+
+        $user_id  = get_current_user_id();
         
         if( $_GET['action'] && $_GET['action'] == 'add' ) {
 
-            $user_info = wp_get_current_user();
-            $user_meta = get_user_meta( $user_info->data->ID );
-            $request_edit = $request;
+            if( $request->checkNonce() ) {
 
-            if( $request_edit->checkNonce() ) {
-
-                $user = $user->findById($request_edit->getDataPost('user_id'));
-                $user->display_name = $request_edit->getDataPost('display_name');
-                $user->user_email = $request_edit->getDataPost('email');
-                $user->update();
-
-                $meta_keys = [
-                    'first_name' => $request_edit->getDataPost('first_name'),
-                    'last_name'  => $request_edit->getDataPost('last_name'),
-                ];
-
-                foreach( $meta_keys as $key => $value ) {  
-
-                    $user_meta = tr_query()->table('dip_usermeta')->where('user_id', '=', $request_edit->getDataPost('user_id'))->findAll();
-                    $user_meta->where('meta_key', '=', $key )->update(['meta_value' => $value]);
-
-                }       
+                $form_expert->post_author   = $user_id;
+                $form_expert->post_date     = date("Y-m-d h:i:s");
+                $form_expert->post_date_gmt = date("Y-m-d h:i:s");
+                $form_expert->post_title    = $request->getDataPost('expert_title');
+                $form_expert->post_content  = $request->getDataPost('expert_description');
+                $form_expert->post_status   = 0;
+                $form_expert->save();    
                 
                 $response = [
-                    'message' => 'اطلاعات کاربری شما بروزرسانی شد',
+                    'message' => 'درخواست شما با موفقیت ثبت شد',
                     'type'    => 200
                 ];
-                // $redirect = tr_redirect()->withMessage('اطلاعات کاربری شما بروزرسانی شد', 200);
-                $redirect = tr_redirect();
-                $redirect->toUrl( home_url('/account/expert/?action=add') )->now();
+                // $redirect = tr_redirect()->withMessage('درخواست شما با موفقیت ثبت شد', 200);
+                // $redirect = tr_redirect();
+                // $redirect->toUrl( home_url('/account/expert/?action=add') )->now();
                 
             } else {
 
@@ -447,12 +437,10 @@ class AccountController extends Controller
 
             }
 
-            return tr_view('account.content.expert-add', compact('posts', 'count', 'total_page', 'current_page') );
+            return tr_view('account.content.expert-add', compact('user_id', 'response') );
 
         }
 
-
-        $user_id  = get_current_user_id();
 
         $where = [
             [
@@ -464,20 +452,7 @@ class AccountController extends Controller
         $option = $option->find()->where($where)->select('option_value')->get()->toArray();
         $option = $option[0]['option_value'];
 
-        $where_expert = [
-            [
-                'column'   => 'post_status',
-                'operator' => '=',
-                'value'    => 1
-            ],
-            'AND',
-            [
-                'column'   => 'post_author',
-                'operator' => '=',
-                'value'    => $user_id
-            ]
-        ];
-        $posts = $form_expert->findAll()->where($where_expert)->orderBy('ID', 'DESC');
+        $posts = $form_expert->findAll()->where('post_author', '=', $user_id)->orderBy('ID', 'DESC');
         $posts_data = $posts; 
         $posts = $posts->get();
         
@@ -518,6 +493,106 @@ class AccountController extends Controller
         }   
 
         return tr_view('account.content.expert', compact('posts', 'count', 'total_page', 'current_page') );
+
+    } 
+
+    /**
+     * The index page for admin
+     *
+     * @return mixed
+     */
+    public function request(FormRequest $form_request, Option $option, Request $request)
+    {
+
+        $user_id  = get_current_user_id();
+        
+        if( $_GET['action'] && $_GET['action'] == 'add' ) {
+
+            if( $request->checkNonce() ) {
+
+                $form_request->post_author   = $user_id;
+                $form_request->post_date     = date("Y-m-d h:i:s");
+                $form_request->post_date_gmt = date("Y-m-d h:i:s");
+                $form_request->post_title    = $request->getDataPost('request_title');
+                $form_request->post_content  = $request->getDataPost('request_description');
+                $form_request->post_status   = 0;
+                $form_request->save();    
+                
+                $response = [
+                    'message' => 'درخواست شما با موفقیت ثبت شد',
+                    'type'    => 200
+                ];
+                // $redirect = tr_redirect()->withMessage('درخواست شما با موفقیت ثبت شد', 200);
+                // $redirect = tr_redirect();
+                // $redirect->toUrl( home_url('/account/request/?action=add') )->now();
+                
+            } else {
+
+                $response = [
+                    // 'message' => 'مشکلی رخ داد، لطفاً مجدداً امتحان نمایید',
+                    // 'type'    => 400
+                ];
+                // $redirect = tr_redirect()->withMessage('مشکلی رخ داد، لطفاً مجدداً امتحان نمایید', 400);
+                // $redirect->toUrl( home_url('/account/request/?action=add') )->now();           
+
+            }
+
+            return tr_view('account.content.request-add', compact('user_id', 'response') );
+
+        }
+
+
+        $where = [
+            [
+                'column'   => 'option_name',
+                'operator' => '=',
+                'value'    => 'posts_per_page'
+            ]
+        ];
+        $option = $option->find()->where($where)->select('option_value')->get()->toArray();
+        $option = $option[0]['option_value'];
+
+        $posts = $form_request->findAll()->where('post_author', '=', $user_id)->orderBy('ID', 'DESC');
+        $posts_data = $posts; 
+        $posts = $posts->get();
+        
+        if( $posts != null || $posts > 0 ) {
+
+            $count = $posts->count();
+            $total_page = ceil($count / $option);
+
+            if( intval($_GET['page']) ) {
+                $current_page = $_GET['page'];
+            } else {
+                $current_page = 1;
+            } 
+            
+            if( intval($_GET['page']) ) {
+                if( (intval($_GET['page']) <= $total_page) && (intval($_GET['page']) >= 1) ) {
+                    $posts = $posts_data->take($option, (intval($_GET['page'])-1)*$option)->get();
+                    if( $_GET['page'] == 1 ) {
+                        // $posts = $posts->take($option, 1);
+                        tr_redirect()->toURL(home_url('/account/request/'))->now();
+                    }
+                } else {
+                    // $posts = $posts->take($option, $_GET['page']);
+                    // tr_redirect()->toURL(home_url('/blog/'))->now();
+                    return include( get_query_template( '404' ) );
+                } 
+            } else {
+                $posts = $posts_data->take($option, 0)->get();
+            }
+
+        } else {
+
+            $posts = [];
+            $count = 0;
+            $total_page = 0;
+            $current_page = 0;
+            
+        }   
+
+        return tr_view('account.content.request', compact('posts', 'count', 'total_page', 'current_page') );
 
     } 
 }

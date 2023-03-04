@@ -80,3 +80,5 @@ tr_route()->get()->match('/account/edit')->do('edit@AccountController')->middlew
 tr_route()->post()->match('/account/edit')->do('edit@AccountController')->middleware('LoggedInUser'); // Account Edit Form
 tr_route()->get()->match('/account/expert')->do('expert@AccountController')->middleware('LoggedInUser'); // Account Expert Form
 tr_route()->post()->match('/account/expert')->do('expert@AccountController')->middleware('LoggedInUser'); // Account Expert Form
+tr_route()->get()->match('/account/request')->do('request@AccountController')->middleware('LoggedInUser'); // Account Request Form
+tr_route()->post()->match('/account/request')->do('request@AccountController')->middleware('LoggedInUser'); // Account Request FormRequest

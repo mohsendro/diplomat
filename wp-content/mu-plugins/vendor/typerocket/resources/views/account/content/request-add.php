@@ -3,7 +3,7 @@
 if ( ! defined( 'ABSPATH' ) ) { die; } // Cannot access directly.
 
 ?>
-<h1>Add Expert</h1>
+<h1>Add Request</h1>
 
 <div class="container-fluid">
 	<div class="row">
@@ -12,8 +12,8 @@ if ( ! defined( 'ABSPATH' ) ) { die; } // Cannot access directly.
 		</div>
 		<div class="col-md-8" style="background: #a3d1f1;">
 			
-			<a href="<?php echo get_home_url() . '/account/expert/'?>"><button class="btn" style="border: 1px solid #3858e9; color: #3858e9;">بازگشت به درخواست‌ها</button></a><hr>
-			<h5>اگر ملکی دارید که نیازمند کارشناسی می باشد، از طریق فرم زیر با ما در ارتباط باشید</h5> 
+			<a href="<?php echo get_home_url() . '/account/request/'?>"><button class="btn" style="border: 1px solid #3858e9; color: #3858e9;">بازگشت به درخواست‌ها</button></a><hr>
+			<h5>اگر به دنبال ملک خاصی هستید، از طریق فرم زیر با ما در ارتباط باشید</h5> 
 
 			<?php
                 if( $response ) {
@@ -49,18 +49,18 @@ if ( ! defined( 'ABSPATH' ) ) { die; } // Cannot access directly.
             ?>
 			
             <?php $EditForm = tr_form('post'); ?>   
-                <?php $EditFormButton = 'درخواست کارشناسی جدید'; ?> 
+                <?php $EditFormButton = 'درخواست ملک جدید'; ?> 
                 <?php echo $EditForm->open(); ?>
                     <?php echo tr_field_nonce(); ?>
 
-                    <label for="expert-title">عنوان درخواست</label><br>
-                    <input type="text" id="expert-title" name="expert_title"><br>
+                    <label for="request-title">عنوان درخواست</label><br>
+                    <input type="text" id="request-title" name="request_title"><br>
 
-					<label for="expert-description">توضیحات درخواست</label><br>
-					<textarea name="expert_description" id="expert-description" cols="30" rows="10"></textarea><br>
-					<em style="display: block;margin-top: 10px;font-size: 12px;font-style: normal;color: red;">لطفاً اطلاعات کاملی از ملک مورد نظر همراه با آدرس دقیق را وارد نمایید</em>
+					<label for="request-description">توضیحات درخواست</label><br>
+					<textarea name="request_description" id="request-description" cols="30" rows="10"></textarea><br>
+					<em style="display: block;margin-top: 10px;font-size: 12px;font-style: normal;color: red;">لطفاً اطلاعات کاملی از ملک مد نظر خئد را وارد نمایید</em>
 
-                    <!-- <input type="submit" value="درخواست کارشناسی جدید"> -->
+                    <!-- <input type="submit" value="درخواست ملک جدید"> -->
             <?php echo $EditForm->close($EditFormButton); ?>
 
 		</div>
