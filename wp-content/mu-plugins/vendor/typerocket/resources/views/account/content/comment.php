@@ -17,10 +17,10 @@ if ( ! defined( 'ABSPATH' ) ) { die; } // Cannot access directly.
 				if( !$posts ) echo "محتوایی وجود ندارد"; 
 				foreach ($posts as $post) {
 					echo $post->comment_ID . ' | ' ;
-					echo "<a href='" . get_permalink($post->comment_post_ID) . "'>" . $post->comment_content . "</a>";
+					echo "<a href='" . get_permalink($post->comment_post_ID) . "' target='_blank'>" . $post->comment_content . "</a>" . ' | ' ;
+					echo get_post_type($post->comment_post_ID);
 					echo "<br>";
 				}
-				echo "<hr>";
 			?>
 
 			<?php

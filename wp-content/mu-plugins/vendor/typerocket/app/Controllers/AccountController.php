@@ -184,7 +184,7 @@ class AccountController extends Controller
             
         }   
 
-        return tr_view('account.content.vip', compact('posts', 'count', 'total_page', 'current_page', 'param') );
+        return tr_view('account.content.vip', compact('posts', 'count', 'total_page', 'current_page') );
 
     }
 
@@ -249,7 +249,7 @@ class AccountController extends Controller
             
         }   
 
-        return tr_view('account.content.wishlist', compact('posts', 'count', 'total_page', 'current_page', 'param') );
+        return tr_view('account.content.wishlist', compact('posts', 'count', 'total_page', 'current_page') );
 
     }
 
@@ -261,7 +261,6 @@ class AccountController extends Controller
     public function comment(Comment $post, Option $option) {
 
         $user_id  = get_current_user_id();
-        $wishlist = get_user_meta( $user_id, 'favoriteAdvertising', true );
 
         $where = [
             [
@@ -273,7 +272,20 @@ class AccountController extends Controller
         $option = $option->find()->where($where)->select('option_value')->get()->toArray();
         $option = $option[0]['option_value'];
 
-        $posts = $post->findAll()->where('comment_approved', '=', 1)->orderBy('comment_ID', 'DESC');
+        $where_comment = [
+            [
+                'column'   => 'comment_approved',
+                'operator' => '=',
+                'value'    => 1
+            ],
+            'AND',
+            [
+                'column'   => 'user_id',
+                'operator' => '=',
+                'value'    => $user_id
+            ]
+        ];
+        $posts = $post->findAll()->where($where_comment)->orderBy('comment_ID', 'DESC');
         $posts_data = $posts; 
         $posts = $posts->get();
         
@@ -313,7 +325,7 @@ class AccountController extends Controller
             
         }   
 
-        return tr_view('account.content.comment', compact('posts', 'count', 'total_page', 'current_page', 'param') );
+        return tr_view('account.content.comment', compact('posts', 'count', 'total_page', 'current_page') );
 
     }
 
