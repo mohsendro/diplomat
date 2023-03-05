@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) { die; } // Cannot access directly.
 // Plugin menu callback function
 function forms_expert_list_table_init() {
 
-    // Creating an instance
+    // Creating an instance   
     $formsExpertTable = new Forms_Expert_List_Table();
 
     echo "<div class='wrap'>";
@@ -46,11 +46,10 @@ class Forms_Expert_List_Table extends WP_List_Table {
     private function get_forms_expert_data($search = "") {
 
         $FormExpertController = new \App\Controllers\FormExpertController;
-        $FormExpertController = $FormExpertController::index();
-        $this->table_data = $FormExpertController;
-        //   $FormExpertController = tr_query()->table('dip_formexperts');
-        //   $this->table_data = $FormExpertController->findAll()->orderBy('ID', 'DESC')->get();
-        //   $this->table_data = json_decode($this->table_data);
+        $IndexFormExpertController  = $FormExpertController::index();
+        $EditFormExpertController   = $FormExpertController::edit();
+        $DeleteFormExpertController = $FormExpertController::delete();
+        $this->table_data = $IndexFormExpertController;
         return $this->table_data;
           
     }
@@ -60,10 +59,10 @@ class Forms_Expert_List_Table extends WP_List_Table {
 
           $columns = array(
                 // 'cb'            => '<input type="checkbox" />',
-                'ID'           => 'شناسه',
+                // 'ID'           => 'شناسه',
+                'post_title'   => 'عنوان',
                 'post_author'  => 'کاربر',
                 'post_date'    => 'تاریخ درخواست',
-                'post_title'   => 'عنوان',
                 'post_content' => 'توضیحات' ,
                 'post_status'  => 'وضعیت',
           );
@@ -131,7 +130,7 @@ class Forms_Expert_List_Table extends WP_List_Table {
     }
 
     // bind data with column
-    function column_default($item, $column_name) {
+    function column_default($item, $column_name) {       
 
         switch ($column_name) {
 
@@ -139,7 +138,17 @@ class Forms_Expert_List_Table extends WP_List_Table {
                 return $item['ID'];
 
             case 'post_title':
-                return $item['post_title'];
+                return 
+                    $item['post_title'] .
+                    "<div class='row-actions'>
+                        <span class='edit'>شناسه: " . $item['ID'] . " | </span>
+                        <span class='edit'>
+                            <a href='". add_query_arg(['action' => 'edit', 'ID' => $item['ID'], 'status' => $item['post_status']]) ."'>تغییر وضعیت</a> | 
+                        </span>
+                        <span class='trash'>
+                            <a href='". add_query_arg(['action' => 'delete', 'ID' => $item['ID']]) ."' class='submitdelete'>حذف</a> 
+                        </span>
+                    </div>";
 
             case 'post_content':
                 return 
@@ -191,12 +200,12 @@ class Forms_Expert_List_Table extends WP_List_Table {
     protected function get_sortable_columns() {
 
           $sortable_columns = array(
-                'ID'           => array('ID', false),
-                'post_author'  => array('post_author', false),
-                'post_date'    => array('post_date', false),
+                // 'ID'           => array('ID', false),
+                // 'post_author'  => array('post_author', false),
+                // 'post_date'    => array('post_date', false),
                 // 'post_title'   => array('post_title', false),
                 // 'post_content' => array('post_content', false),
-                'post_status'  => array('post_status', false),
+                // 'post_status'  => array('post_status', false),
           );
           return $sortable_columns;
 
@@ -205,24 +214,24 @@ class Forms_Expert_List_Table extends WP_List_Table {
     // Adding action buttons to column
     // function column_ID($item) {
 
-    //       $actions = array(
-    //             'edit'      => sprintf('<a href="?page=%s&action=%s&employee=%s">Edit</a>', $_REQUEST['page'], 'edit', $item->ID),
-    //             'delete'    => sprintf('<a href="?page=%s&action=%s&employee=%s">Delete</a>', $_REQUEST['page'], 'delete', $item->ID),
-    //       );
+        //   $actions = array(
+        //         'edit'      => sprintf('<a href="?page=%s&action=%s&employee=%s">Edit</a>', $_REQUEST['page'], 'edit', $item->ID),
+        //         'delete'    => sprintf('<a href="?page=%s&action=%s&employee=%s">Delete</a>', $_REQUEST['page'], 'delete', $item->ID),
+        //   );
 
-    //       return sprintf('%1$s %2$s', $item->ID, $this->row_actions($actions));
+        //   return sprintf('%1$s %2$s', $item->ID, $this->row_actions($actions));
 
     // }
 
     // To show bulk action dropdown
     // function get_bulk_actions() {
 
-    //       $actions = array(
-    //           'edit_all'      => "ویرایش",
-    //           'draft_all'     => "پیشنویس",
-    //           'delete_all'    => 'انتقال به زباله‌دان',
-    //       );
-    //       return $actions;
+        //   $actions = array(
+        //       'edit_all'      => "ویرایش",
+        //       'draft_all'     => "پیشنویس",
+        //       'delete_all'    => 'انتقال به زباله‌دان',
+        //   );
+        //   return $actions;
 
     // }
 
