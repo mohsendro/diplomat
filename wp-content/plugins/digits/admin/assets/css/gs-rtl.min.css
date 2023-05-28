@@ -1,0 +1,98 @@
+.digits_admim_conf .dig_admin_side{position:absolute;direction:ltr}.dig_admin_flt_btn{position:relative!important;top:0;right:0;direction:ltr}.digits_admim_conf .dig_admin_submit[type=submit]{left:45px!important}.dig_admin_head{text-align:right;direction:rtl}.dig_admin_head::after{left:0;right:.5em;margin-left:-50%;margin-right:0}.dig_gs_log_men{float:left}.dig_popmessage{direction:rtl;cursor:default;line-height:18px}.dig_sme_lft_algn{text-align:right!important}.dig_notice button,.digits_admim_conf .select2-container--default[dir=rtl] .select2-selection--single .select2-selection__arrow{right:unset;left:10px}.dg_cs_td .dig_cust_default_fields_drag{left:42px;right:unset}
+
+@font-face {
+	font-family: iranyekan;
+	font-style: normal;
+	font-weight: bold;
+	src: url('fonts/eot/iranyekanwebbold.eot');
+	src: url('fonts/eot/iranyekanwebbold.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('fonts/woff/iranyekanwebbold.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('fonts/ttf/iranyekanwebbold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: iranyekan;
+	font-style: normal;
+	font-weight: 100;
+	src: url('fonts/eot/iranyekanwebthin.eot');
+	src: url('fonts/eot/iranyekanwebthin.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('fonts/woff/iranyekanwebthin.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('fonts/ttf/iranyekanwebthin.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: iranyekan;
+	font-style: normal;
+	font-weight: 300;
+	src: url('fonts/eot/iranyekanweblight.eot');
+	src: url('fonts/eot/iranyekanweblight.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('fonts/woff/iranyekanweblight.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('fonts/ttf/iranyekanweblight.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: iranyekan;
+	font-style: normal;
+	font-weight: normal;
+	src: url('fonts/eot/iranyekanwebregular.eot');
+	src: url('fonts/eot/iranyekanwebregular.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('fonts/woff/iranyekanwebregular.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('fonts/ttf/iranyekanwebregular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: iranyekan;
+	font-style: normal;
+	font-weight: 500;
+	src: url('fonts/eot/iranyekanwebmedium.eot');
+	src: url('fonts/eot/iranyekanwebmedium.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('fonts/woff/iranyekanwebmedium.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('fonts/ttf/iranyekanwebmedium.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: iranyekan;
+	font-style: normal;
+	font-weight: 800;
+	src: url('fonts/eot/iranyekanwebextrabold.eot');
+	src: url('fonts/eot/iranyekanwebextrabold.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('fonts/woff/iranyekanwebextrabold.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('fonts/ttf/iranyekanwebextrabold.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: iranyekan;
+	font-style: normal;
+	font-weight: 900;
+	src: url('fonts/eot/iranyekanwebblack.eot');
+	src: url('fonts/eot/iranyekanwebblack.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('fonts/woff/iranyekanwebblack.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('fonts/ttf/iranyekanwebblack.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: iranyekan;
+	font-style: normal;
+	font-weight: 950;
+	src: url('fonts/eot/iranyekanwebextrablack.eot');
+	src: url('fonts/eot/iranyekanwebextrablack.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+		 url('fonts/woff/iranyekanwebextrablack.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+		 url('fonts/ttf/iranyekanwebextrablack.ttf') format('truetype');
+}
+.digits_admim_conf{
+    font-family:iranyekan!important;
+}
+.melipayamak{
+display: inline-block;
+line-height: 1.4;
+padding: 11px 15px;
+font-size: 14px;
+text-align: right;
+margin: 25px 2px 0 20px;
+background-color: #fff;
+border-right: 4px solid #ffba00;
+box-shadow: 0 1px 1px 0 rgba(0,0,0,.1);
+font-family:iranyekan!important;
+}
+
+.dig_admin_side{display:none;}

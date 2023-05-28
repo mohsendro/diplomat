@@ -79,11 +79,11 @@ $table_prefix = 'dip_';
  *
  * @link https://wordpress.org/support/article/debugging-in-wordpress/
  */
-define( 'WP_DEBUG',         true );
-// define( 'WP_DEBUG_LOG',     true );
+define( 'WP_DEBUG', false );
+// define( 'WP_DEBUG_LOG', true );
 // define( 'WP_DEBUG_DISPLAY', true );
-// define( 'SCRIPT_DEBUG',     true );
-// define( 'SAVEQUERIES',      true );
+// define( 'SCRIPT_DEBUG', true );
+// define( 'SAVEQUERIES', true );
 // define( 'WP_DISABLE_FATAL_ERROR_HANDLER', true );   // 5.2 and later
 // @ini_set( 'log_errors', 'Off' );
 // @ini_set( 'display_errors', 'On' );
@@ -96,7 +96,7 @@ define( 'WP_DEBUG',         true );
 
 /* Disable Post Revisions. */
 define( 'WP_POST_REVISIONS', false );
-define('AUTOSAVE_INTERVAL', 3600 );
+define('AUTOSAVE_INTERVAL', 86400 );
 // define( 'WP_POST_REVISIONS', 3 );
 /* Media Trash. */
 define( 'MEDIA_TRASH', true );
